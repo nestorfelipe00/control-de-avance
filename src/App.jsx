@@ -1,11 +1,13 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, lazy, Suspense } from 'react'
 import './App.css'
 import Header from './components/Header.jsx'
 import KpiCards from './components/KpiCards.jsx'
 import Filters from './components/Filters.jsx'
 import ViewerPanel from './components/ViewerPanel.jsx'
-import ViewerPanelSDK from './components/ViewerPanelSDK.jsx'
 import DonutSemana from './components/DonutSemana.jsx'
+
+// El visor IFC (ThatOpen) es pesado: se carga solo cuando se usa (modo 'ifc').
+const ViewerPanelIFC = lazy(() => import('./components/ViewerPanelIFC.jsx'))
 import BarrasAvance from './components/BarrasAvance.jsx'
 import PartidasTable from './components/PartidasTable.jsx'
 import { useAvanceData } from './hooks/useAvanceData.js'
@@ -38,8 +40,18 @@ export default function App() {
           <Filters filtros={filtros} setFiltros={setFiltros} niveles={niveles} />
 
           <div className="grid">
-            {viewerConfig.mode === 'sdk' ? (
-              <ViewerPanelSDK registros={filtrados} filtros={filtros} />
+            {viewerConfig.mode === 'ifc' ? (
+              <Suspense
+                fallback={
+                  <div className="card">
+                    <div className="viewer-stage">
+                      <div className="viewer-note">Cargando visor IFC…</div>
+                    </div>
+                  </div>
+                }
+              >
+                <ViewerPanelIFC registros={filtrados} filtros={filtros} />
+              </Suspense>
             ) : (
               <ViewerPanel />
             )}

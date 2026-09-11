@@ -49,7 +49,10 @@ export function getEmbedUrl() {
  * (con VITE_PROP_NIVEL / VITE_PROP_DISCIPLINA).
  */
 export const viewerConfig = {
+  // 'embed' (iframe Speckle, por defecto) | 'ifc' (visor propio ThatOpen/web-ifc)
   mode: import.meta.env.VITE_VIEWER_MODE || 'embed',
+  // URL del archivo IFC a cargar en el visor propio (public/ o storage). Ej: '/modelo.ifc'
+  ifcUrl: import.meta.env.VITE_IFC_URL || '',
   propNivel: import.meta.env.VITE_PROP_NIVEL || 'level',
   propDisciplina: import.meta.env.VITE_PROP_DISCIPLINA || 'discipline'
 }
