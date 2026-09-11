@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { getEmbedUrl } from '../config/speckle.js'
 import { ESTADO_COLOR } from '../domain/colors.js'
 import { ESTADOS } from '../domain/constants.js'
@@ -9,24 +10,36 @@ import { ESTADOS } from '../domain/constants.js'
  * ante el formato de la geometría (a diferencia del loader de objetos, que no
  * lee los "bundles" del importador nuevo).
  *
- * NOTA fase 2: el recoloreo por estado de avance requiere el paquete
- * @speckle/viewer con acceso programático a los objetos (ver src/lib/speckleViewer.js).
- * El embed es de solo visualización/órbita, así que la leyenda es informativa.
+ * Botón "Reencuadrar": como el iframe es de otro dominio (app.speckle.systems),
+ * el navegador no permite controlar su cámara desde aquí; la forma fiable de
+ * volver al encuadre inicial es RECARGAR el visor (se remonta el iframe).
+ *
+ * NOTA fase 2: el recoloreo por estado de avance requiere @speckle/viewer con
+ * acceso programático a los objetos (ver src/lib/speckleViewer.js).
  */
 export default function ViewerPanel() {
   const src = getEmbedUrl()
+  const [reloadKey, setReloadKey] = useState(0)
+
   return (
     <div className="card">
       <h2>
         Modelo 3D · <small>Speckle Viewer (modelo federado)</small>
       </h2>
       <div className="viewer-stage">
+        <button
+          className="viewer-reset"
+          onClick={() => setReloadKey((k) => k + 1)}
+          title="Volver a la vista inicial (recarga el visor)"
+        >
+          ⌖ Reencuadrar
+        </button>
         <iframe
+          key={reloadKey}
           title="Speckle — Modelo de Coordinación"
           src={src}
           allow="fullscreen; xr-spatial-tracking"
           loading="lazy"
-          style={{ width: '100%', height: '100%', border: 0, display: 'block' }}
         />
       </div>
       <div className="legend">
