@@ -6,7 +6,7 @@ import { viewerConfig } from '../config/speckle.js'
 export default function Filters({ filtros, setFiltros, niveles }) {
   const set = (k) => (e) => setFiltros((f) => ({ ...f, [k]: e.target.value }))
   const semanas = Array.from({ length: TOTAL_SEMANAS }, (_, i) => i + 1)
-  const mostrarDisciplina = viewerConfig.mode === 'sdk'
+  const mostrarDisciplina = viewerConfig.mode === 'gltf'
 
   return (
     <div className="filters">

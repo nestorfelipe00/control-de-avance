@@ -48,11 +48,25 @@ export function getEmbedUrl() {
  * las que se aísla. AJUSTAR a los reales tras inspeccionar el modelo clásico
  * (con VITE_PROP_NIVEL / VITE_PROP_DISCIPLINA).
  */
+/**
+ * Modelos glTF/GLB a cargar en el visor propio (three.js), uno por disciplina.
+ * Se define con VITE_GLTF_MODELS = JSON, ej:
+ *   [{"id":"ELE","label":"Eléctrico","url":"https://.../ELE.glb"},
+ *    {"id":"ARQ","label":"Arquitectura","url":"https://.../ARQ.glb"}]
+ */
+function parseGltfModels() {
+  try {
+    const raw = import.meta.env.VITE_GLTF_MODELS
+    if (raw) return JSON.parse(raw)
+  } catch (e) {
+    console.warn('VITE_GLTF_MODELS inválido:', e?.message)
+  }
+  return []
+}
+
 export const viewerConfig = {
-  // 'embed' (iframe Speckle, por defecto) | 'ifc' (visor propio ThatOpen/web-ifc)
+  // 'embed' (iframe Speckle, por defecto) | 'gltf' (visor propio three.js)
   mode: import.meta.env.VITE_VIEWER_MODE || 'embed',
-  // URL del archivo IFC a cargar en el visor propio (public/ o storage). Ej: '/modelo.ifc'
-  ifcUrl: import.meta.env.VITE_IFC_URL || '',
-  propNivel: import.meta.env.VITE_PROP_NIVEL || 'level',
-  propDisciplina: import.meta.env.VITE_PROP_DISCIPLINA || 'discipline'
+  // Modelos glTF por disciplina (para el visor propio)
+  gltfModels: parseGltfModels()
 }

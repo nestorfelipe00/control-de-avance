@@ -6,8 +6,8 @@ import Filters from './components/Filters.jsx'
 import ViewerPanel from './components/ViewerPanel.jsx'
 import DonutSemana from './components/DonutSemana.jsx'
 
-// El visor IFC (ThatOpen) es pesado: se carga solo cuando se usa (modo 'ifc').
-const ViewerPanelIFC = lazy(() => import('./components/ViewerPanelIFC.jsx'))
+// El visor glTF (three.js) se carga solo cuando se usa (modo 'gltf').
+const ViewerPanelGLTF = lazy(() => import('./components/ViewerPanelGLTF.jsx'))
 import BarrasAvance from './components/BarrasAvance.jsx'
 import PartidasTable from './components/PartidasTable.jsx'
 import { useAvanceData } from './hooks/useAvanceData.js'
@@ -40,17 +40,17 @@ export default function App() {
           <Filters filtros={filtros} setFiltros={setFiltros} niveles={niveles} />
 
           <div className="grid">
-            {viewerConfig.mode === 'ifc' ? (
+            {viewerConfig.mode === 'gltf' ? (
               <Suspense
                 fallback={
                   <div className="card">
                     <div className="viewer-stage">
-                      <div className="viewer-note">Cargando visor IFC…</div>
+                      <div className="viewer-note">Cargando visor 3D…</div>
                     </div>
                   </div>
                 }
               >
-                <ViewerPanelIFC registros={filtrados} filtros={filtros} />
+                <ViewerPanelGLTF registros={filtrados} filtros={filtros} />
               </Suspense>
             ) : (
               <ViewerPanel />
