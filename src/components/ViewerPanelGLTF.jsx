@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { viewerConfig } from '../config/speckle.js'
 import { ESTADO_COLOR } from '../domain/colors.js'
@@ -76,13 +77,27 @@ export default function ViewerPanelGLTF({ filtros = {} }) {
       setEstado('sin-modelos')
     } else {
       setEstado('cargando')
-      const loader = new GLTFLoader()
+      const gltfLoader = new GLTFLoader()
+      const objLoader = new OBJLoader()
       let pendientes = modelos.length
       modelos.forEach((m) => {
+        const esObj = m.url.toLowerCase().split('?')[0].endsWith('.obj')
+        const loader = esObj ? objLoader : gltfLoader
         loader.load(
           m.url,
-          (gltf) => {
-            const obj = gltf.scene
+          (res) => {
+            const obj = esObj ? res : res.scene
+            // OBJ no trae material: asignar uno visible.
+            if (esObj) {
+              const mat = new THREE.MeshStandardMaterial({
+                color: m.color || 0x9aa7bd,
+                metalness: 0.1,
+                roughness: 0.85
+              })
+              obj.traverse((o) => {
+                if (o.isMesh) o.material = mat
+              })
+            }
             obj.userData.disciplina = m.id
             scene.add(obj)
             three.current.models[m.id] = obj
