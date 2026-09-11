@@ -33,3 +33,23 @@ export const embedConfig = {
 export function getEmbedUrl() {
   return embedConfig.url
 }
+
+/**
+ * Configuración del modo de visor:
+ *  - 'embed' (por defecto): iframe de Speckle. Muestra el modelo pero NO permite
+ *    filtrar desde la app (funciona con cualquier formato, incluido bundle).
+ *  - 'sdk': @speckle/viewer con filtrado programático (aislar por disciplina/nivel,
+ *    recolorear por avance). REQUIERE un modelo en formato clásico de objetos
+ *    (el bundle actual NO carga con el SDK).
+ *
+ * Cambiar a 'sdk' con VITE_VIEWER_MODE=sdk cuando exista el modelo clásico.
+ *
+ * propNivel / propDisciplina: nombres de las propiedades en el modelo Speckle por
+ * las que se aísla. AJUSTAR a los reales tras inspeccionar el modelo clásico
+ * (con VITE_PROP_NIVEL / VITE_PROP_DISCIPLINA).
+ */
+export const viewerConfig = {
+  mode: import.meta.env.VITE_VIEWER_MODE || 'embed',
+  propNivel: import.meta.env.VITE_PROP_NIVEL || 'level',
+  propDisciplina: import.meta.env.VITE_PROP_DISCIPLINA || 'discipline'
+}

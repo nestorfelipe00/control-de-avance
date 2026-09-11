@@ -30,3 +30,16 @@ export const NIVELES = ['Nivel -1', 'Nivel 1', 'Nivel 2', 'Nivel 3', 'Nivel 4', 
 
 /** Total de semanas del cronograma (ajustar al plan real de obra). */
 export const TOTAL_SEMANAS = 16
+
+/**
+ * Disciplinas presentes en el modelo federado (para aislar en el visor SDK).
+ * Códigos del modelo: PCI, GCL, ELE, ALL, ARQ. `match` son textos a buscar en la
+ * propiedad de disciplina de los objetos (ajustar a los reales del modelo).
+ */
+export const DISCIPLINAS = [
+  { id: 'ARQ', label: 'Arquitectura', match: ['ARQ', 'arquitectura'] },
+  { id: 'ELE', label: 'Eléctrico', match: ['ELE', 'electric'] },
+  { id: 'PCI', label: 'Protección Incendios', match: ['PCI', 'incendio', 'fire'] },
+  { id: 'GCL', label: 'Gases Clínicos', match: ['GCL', 'gas'] },
+  { id: 'ALL', label: 'Alcantarillado', match: ['ALL', 'alcantarill', 'sanitary'] }
+]

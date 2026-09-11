@@ -1,10 +1,12 @@
-import { ESTADO_LABEL, ESTADOS } from '../domain/constants.js'
+import { ESTADO_LABEL, ESTADOS, DISCIPLINAS } from '../domain/constants.js'
 import { TOTAL_SEMANAS } from '../domain/constants.js'
+import { viewerConfig } from '../config/speckle.js'
 
-/** Barra de filtros: Estatus, Semana, Nivel + limpiar. */
+/** Barra de filtros: Estatus, Semana, Nivel (+ Disciplina en modo SDK) + limpiar. */
 export default function Filters({ filtros, setFiltros, niveles }) {
   const set = (k) => (e) => setFiltros((f) => ({ ...f, [k]: e.target.value }))
   const semanas = Array.from({ length: TOTAL_SEMANAS }, (_, i) => i + 1)
+  const mostrarDisciplina = viewerConfig.mode === 'sdk'
 
   return (
     <div className="filters">
@@ -40,9 +42,22 @@ export default function Filters({ filtros, setFiltros, niveles }) {
           ))}
         </select>
       </div>
+      {mostrarDisciplina && (
+        <div className="field">
+          <label htmlFor="f-disc">Disciplina (3D)</label>
+          <select id="f-disc" value={filtros.disciplina || 'todas'} onChange={set('disciplina')}>
+            <option value="todas">Todas</option>
+            {DISCIPLINAS.map((d) => (
+              <option key={d.id} value={d.id}>
+                {d.label}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
       <button
         className="reset"
-        onClick={() => setFiltros({ estatus: 'todos', semana: 'todas', nivel: 'todos' })}
+        onClick={() => setFiltros({ estatus: 'todos', semana: 'todas', nivel: 'todos', disciplina: 'todas' })}
       >
         ↺ Limpiar filtros
       </button>

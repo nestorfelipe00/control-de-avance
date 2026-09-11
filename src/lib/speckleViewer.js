@@ -128,6 +128,39 @@ export class SpeckleViewerController {
     this.viewer?.requestRender?.()
   }
 
+  /**
+   * Recorre el árbol y devuelve los speckleIds cuyo objeto "raw" cumple el
+   * predicado. Útil para aislar por disciplina, nivel, categoría, etc.
+   * @param {(raw:object)=>boolean} pred
+   */
+  getIdsByPredicate(pred) {
+    const ids = []
+    const tree = this.viewer?.getWorldTree?.()
+    if (!tree) return ids
+    tree.walk((node) => {
+      const raw = node?.model?.raw
+      if (raw?.id && pred(raw)) ids.push(raw.id)
+      return true
+    })
+    return ids
+  }
+
+  /**
+   * Aísla los objetos que cumplen el predicado (el resto queda fantasma).
+   * Si no hay coincidencias, limpia el aislamiento.
+   * @returns {number} cantidad aislada
+   */
+  isolateByPredicate(pred) {
+    const ids = this.getIdsByPredicate(pred)
+    if (ids.length === 0) {
+      if (this.filtering) this.filtering.resetFilters()
+      this.viewer?.requestRender?.()
+      return 0
+    }
+    this.isolate(ids)
+    return ids.length
+  }
+
   get isLoaded() {
     return this._loaded
   }
