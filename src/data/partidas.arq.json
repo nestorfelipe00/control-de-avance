@@ -1,0 +1,2290 @@
+[
+  {
+    "id": "596.2",
+    "edt": "1.7.1.1.2",
+    "nombre": "Impermeabilizaciones",
+    "cantidad": 41428.63,
+    "unidad": "m2",
+    "ponderacion": 0.007652707901065645
+  },
+  {
+    "id": "597.2",
+    "edt": "1.7.1.2.2",
+    "nombre": "Impermeabilizaciones",
+    "cantidad": 18141.8,
+    "unidad": "m2",
+    "ponderacion": 0.0033511580311991643
+  },
+  {
+    "id": "598.1",
+    "edt": "1.7.1.3.1",
+    "nombre": "Impermeabilizaciones",
+    "cantidad": 2580.78,
+    "unidad": "m2",
+    "ponderacion": 0.0004767223552105181
+  },
+  {
+    "id": "599.2",
+    "edt": "1.7.1.4.2",
+    "nombre": "Impermeabilizaciones",
+    "cantidad": 1603.87,
+    "unidad": "m2",
+    "ponderacion": 0.0002962672850268112
+  },
+  {
+    "id": "600.2",
+    "edt": "1.7.1.5.2",
+    "nombre": "Impermeabilizaciones",
+    "cantidad": 1368.54,
+    "unidad": "m2",
+    "ponderacion": 0.0002527970660032248
+  },
+  {
+    "id": "601.1",
+    "edt": "1.7.1.6.1",
+    "nombre": "Impermeabilizaciones",
+    "cantidad": 1061.88,
+    "unidad": "m2",
+    "ponderacion": 0.00019615075076176384
+  },
+  {
+    "id": "602.1",
+    "edt": "1.7.1.7.1",
+    "nombre": "Impermeabilizaciones",
+    "cantidad": 846.57,
+    "unidad": "m2",
+    "ponderacion": 0.00015637863136360643
+  },
+  {
+    "id": "603.1",
+    "edt": "1.7.1.8.1",
+    "nombre": "Impermeabilizaciones",
+    "cantidad": 832.66,
+    "unidad": "m2",
+    "ponderacion": 0.00015380917253295128
+  },
+  {
+    "id": "605.1",
+    "edt": "1.7.2.1.1",
+    "nombre": "Sobrelosas",
+    "cantidad": 439.0,
+    "unidad": "m2",
+    "ponderacion": 9.752819414770826e-05
+  },
+  {
+    "id": "605.2",
+    "edt": "1.7.2.1.2",
+    "nombre": "Pisos Industriales y Decorativos (greiting y hormigón pulido)",
+    "cantidad": 355.0,
+    "unidad": "m2",
+    "ponderacion": 7.88667629212675e-05
+  },
+  {
+    "id": "605.3",
+    "edt": "1.7.2.1.3",
+    "nombre": "Baldosas Microvibrada (incluye guardapolvos)",
+    "cantidad": 36.0,
+    "unidad": "m2",
+    "ponderacion": 1e-05
+  },
+  {
+    "id": "605.4",
+    "edt": "1.7.2.1.4",
+    "nombre": "Pavimento de Porcelanato",
+    "cantidad": 84.0,
+    "unidad": "m2",
+    "ponderacion": 1.866143122644076e-05
+  },
+  {
+    "id": "606.1",
+    "edt": "1.7.2.2.1",
+    "nombre": "Sobrelosas",
+    "cantidad": 16997.0,
+    "unidad": "m2",
+    "ponderacion": 0.003776051744712067
+  },
+  {
+    "id": "606.2",
+    "edt": "1.7.2.2.2",
+    "nombre": "Pisos Industriales y Decorativos (greiting y hormigón pulido)",
+    "cantidad": 3039.0,
+    "unidad": "m2",
+    "ponderacion": 0.0006751439225851603
+  },
+  {
+    "id": "606.3",
+    "edt": "1.7.2.2.3",
+    "nombre": "Baldosas Microvibrada (incluye guardapolvos)",
+    "cantidad": 6561.0,
+    "unidad": "m2",
+    "ponderacion": 0.00146
+  },
+  {
+    "id": "606.4",
+    "edt": "1.7.2.2.4",
+    "nombre": "Pavimento de Porcelanato",
+    "cantidad": 3082.0,
+    "unidad": "m2",
+    "ponderacion": 0.0006846967980939335
+  },
+  {
+    "id": "606.5",
+    "edt": "1.7.2.2.5",
+    "nombre": "Pavimentos Vinílicos",
+    "cantidad": 2819.0,
+    "unidad": "m2",
+    "ponderacion": 0.0006262687455635298
+  },
+  {
+    "id": "606.6",
+    "edt": "1.7.2.2.6",
+    "nombre": "Pisos de Caucho",
+    "cantidad": 8057.0,
+    "unidad": "m2",
+    "ponderacion": 0.001789942278469443
+  },
+  {
+    "id": "606.7",
+    "edt": "1.7.2.2.7",
+    "nombre": "Piso de Madera Auditorio",
+    "cantidad": 388.0,
+    "unidad": "m2",
+    "ponderacion": 8.619803947451208e-05
+  },
+  {
+    "id": "607.1",
+    "edt": "1.7.2.3.1",
+    "nombre": "Sobrelosas",
+    "cantidad": 17294.0,
+    "unidad": "m2",
+    "ponderacion": 0.0038420332336912676
+  },
+  {
+    "id": "607.2",
+    "edt": "1.7.2.3.2",
+    "nombre": "Pisos Industriales y Decorativos (greiting y hormigón pulido)",
+    "cantidad": 411.0,
+    "unidad": "m2",
+    "ponderacion": 9.1307717072228e-05
+  },
+  {
+    "id": "607.3",
+    "edt": "1.7.2.3.3",
+    "nombre": "Baldosas Microvibrada (incluye guardapolvos)",
+    "cantidad": 806.0,
+    "unidad": "m2",
+    "ponderacion": 0.00018
+  },
+  {
+    "id": "607.4",
+    "edt": "1.7.2.3.4",
+    "nombre": "Pavimento de Porcelanato",
+    "cantidad": 2284.0,
+    "unidad": "m2",
+    "ponderacion": 0.0005074132014427463
+  },
+  {
+    "id": "607.5",
+    "edt": "1.7.2.3.5",
+    "nombre": "Pavimentos Vinílicos",
+    "cantidad": 1328.0,
+    "unidad": "m2",
+    "ponderacion": 0.0002950283412942063
+  },
+  {
+    "id": "607.6",
+    "edt": "1.7.2.3.6",
+    "nombre": "Pisos de Caucho",
+    "cantidad": 13271.0,
+    "unidad": "m2",
+    "ponderacion": 0.002948283973882087
+  },
+  {
+    "id": "608.1",
+    "edt": "1.7.2.4.1",
+    "nombre": "Sobrelosas",
+    "cantidad": 13908.0,
+    "unidad": "m2",
+    "ponderacion": 0.0030897998273492627
+  },
+  {
+    "id": "608.2",
+    "edt": "1.7.2.4.2",
+    "nombre": "Pisos Industriales y Decorativos (greiting y hormigón pulido)",
+    "cantidad": 990.0,
+    "unidad": "m2",
+    "ponderacion": 0.00021993829659733752
+  },
+  {
+    "id": "608.3",
+    "edt": "1.7.2.4.3",
+    "nombre": "Baldosas Microvibrada (incluye guardapolvos)",
+    "cantidad": 893.0,
+    "unidad": "m2",
+    "ponderacion": 0.0002
+  },
+  {
+    "id": "608.4",
+    "edt": "1.7.2.4.4",
+    "nombre": "Pavimento de Porcelanato",
+    "cantidad": 1720.0,
+    "unidad": "m2",
+    "ponderacion": 0.0003821150203509298
+  },
+  {
+    "id": "608.5",
+    "edt": "1.7.2.4.5",
+    "nombre": "Pavimentos Vinílicos",
+    "cantidad": 3062.0,
+    "unidad": "m2",
+    "ponderacion": 0.0006802536001828763
+  },
+  {
+    "id": "608.6",
+    "edt": "1.7.2.4.6",
+    "nombre": "Pisos de Caucho",
+    "cantidad": 8136.0,
+    "unidad": "m2",
+    "ponderacion": 0.001807492910218119
+  },
+  {
+    "id": "609.1",
+    "edt": "1.7.2.5.1",
+    "nombre": "Sobrelosas",
+    "cantidad": 4009.0,
+    "unidad": "m2",
+    "ponderacion": 0.0008906390212714405
+  },
+  {
+    "id": "609.2",
+    "edt": "1.7.2.5.2",
+    "nombre": "Pisos Industriales y Decorativos (greiting y hormigón pulido)",
+    "cantidad": 444.0,
+    "unidad": "m2",
+    "ponderacion": 9.863899362547259e-05
+  },
+  {
+    "id": "609.3",
+    "edt": "1.7.2.5.3",
+    "nombre": "Baldosas Microvibrada (incluye guardapolvos)",
+    "cantidad": 5942.0,
+    "unidad": "m2",
+    "ponderacion": 0.00132
+  },
+  {
+    "id": "609.4",
+    "edt": "1.7.2.5.4",
+    "nombre": "Pavimento de Porcelanato",
+    "cantidad": 1475.0,
+    "unidad": "m2",
+    "ponderacion": 0.0003276858459404776
+  },
+  {
+    "id": "609.5",
+    "edt": "1.7.2.5.5",
+    "nombre": "Pavimentos Vinílicos",
+    "cantidad": 195.0,
+    "unidad": "m2",
+    "ponderacion": 4.33211796328089e-05
+  },
+  {
+    "id": "609.6",
+    "edt": "1.7.2.5.6",
+    "nombre": "Pisos de Caucho",
+    "cantidad": 1895.0,
+    "unidad": "m2",
+    "ponderacion": 0.00042099300207268137
+  },
+  {
+    "id": "609.7",
+    "edt": "1.7.2.5.7",
+    "nombre": "Piso Técnico Registrable",
+    "cantidad": 133.0,
+    "unidad": "m2",
+    "ponderacion": 2.9547266108531197e-05
+  },
+  {
+    "id": "610.1",
+    "edt": "1.7.2.6.1",
+    "nombre": "Sobrelosas",
+    "cantidad": 7606.0,
+    "unidad": "m2",
+    "ponderacion": 0.0016897481655751003
+  },
+  {
+    "id": "610.2",
+    "edt": "1.7.2.6.2",
+    "nombre": "Pisos Industriales y Decorativos (greiting y hormigón pulido)",
+    "cantidad": 570.0,
+    "unidad": "m2",
+    "ponderacion": 0.00012663114046513373
+  },
+  {
+    "id": "610.3",
+    "edt": "1.7.2.6.3",
+    "nombre": "Baldosas Microvibrada (incluye guardapolvos)",
+    "cantidad": 1300.0,
+    "unidad": "m2",
+    "ponderacion": 0.00029
+  },
+  {
+    "id": "610.4",
+    "edt": "1.7.2.6.4",
+    "nombre": "Pavimento de Porcelanato",
+    "cantidad": 1133.0,
+    "unidad": "m2",
+    "ponderacion": 0.00025170716166139737
+  },
+  {
+    "id": "610.5",
+    "edt": "1.7.2.6.5",
+    "nombre": "Pavimentos Vinílicos",
+    "cantidad": 848.0,
+    "unidad": "m2",
+    "ponderacion": 0.00018839159142883054
+  },
+  {
+    "id": "610.6",
+    "edt": "1.7.2.6.6",
+    "nombre": "Pisos de Caucho",
+    "cantidad": 5055.0,
+    "unidad": "m2",
+    "ponderacion": 0.0011230182720197387
+  },
+  {
+    "id": "611.1",
+    "edt": "1.7.2.7.1",
+    "nombre": "Sobrelosas",
+    "cantidad": 7405.0,
+    "unidad": "m2",
+    "ponderacion": 0.001645094026568974
+  },
+  {
+    "id": "611.2",
+    "edt": "1.7.2.7.2",
+    "nombre": "Pisos Industriales y Decorativos (greiting y hormigón pulido)",
+    "cantidad": 586.0,
+    "unidad": "m2",
+    "ponderacion": 0.00013018569879397958
+  },
+  {
+    "id": "611.3",
+    "edt": "1.7.2.7.3",
+    "nombre": "Baldosas Microvibrada (incluye guardapolvos)",
+    "cantidad": 1278.0,
+    "unidad": "m2",
+    "ponderacion": 0.00028
+  },
+  {
+    "id": "611.4",
+    "edt": "1.7.2.7.4",
+    "nombre": "Pavimento de Porcelanato",
+    "cantidad": 1112.0,
+    "unidad": "m2",
+    "ponderacion": 0.0002470418038547872
+  },
+  {
+    "id": "611.5",
+    "edt": "1.7.2.7.5",
+    "nombre": "Pavimentos Vinílicos",
+    "cantidad": 850.0,
+    "unidad": "m2",
+    "ponderacion": 0.00018883591121993622
+  },
+  {
+    "id": "611.6",
+    "edt": "1.7.2.7.6",
+    "nombre": "Pisos de Caucho",
+    "cantidad": 4857.0,
+    "unidad": "m2",
+    "ponderacion": 0.001079030612700271
+  },
+  {
+    "id": "612.1",
+    "edt": "1.7.2.8.1",
+    "nombre": "Sobrelosas",
+    "cantidad": 7421.0,
+    "unidad": "m2",
+    "ponderacion": 0.0016486485848978198
+  },
+  {
+    "id": "612.2",
+    "edt": "1.7.2.8.2",
+    "nombre": "Pisos Industriales y Decorativos (greiting y hormigón pulido)",
+    "cantidad": 584.0,
+    "unidad": "m2",
+    "ponderacion": 0.00012974137900287382
+  },
+  {
+    "id": "612.3",
+    "edt": "1.7.2.8.3",
+    "nombre": "Baldosas Microvibrada (incluye guardapolvos)",
+    "cantidad": 1234.0,
+    "unidad": "m2",
+    "ponderacion": 0.00027
+  },
+  {
+    "id": "612.4",
+    "edt": "1.7.2.8.4",
+    "nombre": "Pavimento de Porcelanato",
+    "cantidad": 1134.0,
+    "unidad": "m2",
+    "ponderacion": 0.0002519293215569502
+  },
+  {
+    "id": "612.5",
+    "edt": "1.7.2.8.5",
+    "nombre": "Pavimentos Vinílicos",
+    "cantidad": 837.0,
+    "unidad": "m2",
+    "ponderacion": 0.00018594783257774899
+  },
+  {
+    "id": "612.6",
+    "edt": "1.7.2.8.6",
+    "nombre": "Pisos de Caucho",
+    "cantidad": 4866.0,
+    "unidad": "m2",
+    "ponderacion": 0.0010810300517602467
+  },
+  {
+    "id": "613.1",
+    "edt": "1.7.2.9.1",
+    "nombre": "Sobrelosas",
+    "cantidad": 203.0,
+    "unidad": "m2",
+    "ponderacion": 4.5098458797231835e-05
+  },
+  {
+    "id": "613.2",
+    "edt": "1.7.2.9.2",
+    "nombre": "Pisos Industriales y Decorativos (greiting y hormigón pulido)",
+    "cantidad": 203.0,
+    "unidad": "m2",
+    "ponderacion": 4.5098458797231835e-05
+  },
+  {
+    "id": "613.3",
+    "edt": "1.7.2.9.3",
+    "nombre": "Baldosas Microvibrada (incluye guardapolvos)",
+    "cantidad": 3.0,
+    "unidad": "",
+    "ponderacion": 7e-07
+  },
+  {
+    "id": "615.2",
+    "edt": "",
+    "nombre": "Estructuración de Tabique",
+    "cantidad": 1125.0,
+    "unidad": "m2",
+    "ponderacion": 7.902755406474298e-05
+  },
+  {
+    "id": "615.3",
+    "edt": "",
+    "nombre": "Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)",
+    "cantidad": 1125.0,
+    "unidad": "m2",
+    "ponderacion": 3.951377703237149e-05
+  },
+  {
+    "id": "615.4",
+    "edt": "",
+    "nombre": "Montaje de Aislación de tabique",
+    "cantidad": 1125.0,
+    "unidad": "m2",
+    "ponderacion": 1.9756888516185745e-05
+  },
+  {
+    "id": "615.5",
+    "edt": "",
+    "nombre": "Instalación de Segunda Cara",
+    "cantidad": 1125.0,
+    "unidad": "m2",
+    "ponderacion": 3.951377703237149e-05
+  },
+  {
+    "id": "616.2",
+    "edt": "",
+    "nombre": "Estructuración de Tabique",
+    "cantidad": 36489.0,
+    "unidad": "m2",
+    "ponderacion": 0.002563232373571917
+  },
+  {
+    "id": "616.3",
+    "edt": "",
+    "nombre": "Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)",
+    "cantidad": 36489.0,
+    "unidad": "m2",
+    "ponderacion": 0.0012816161867859584
+  },
+  {
+    "id": "616.4",
+    "edt": "",
+    "nombre": "Montaje de Aislación de tabique",
+    "cantidad": 36489.0,
+    "unidad": "m2",
+    "ponderacion": 0.0006408080933929792
+  },
+  {
+    "id": "616.5",
+    "edt": "",
+    "nombre": "Instalación de Segunda Cara",
+    "cantidad": 36489.0,
+    "unidad": "m2",
+    "ponderacion": 0.0012816161867859584
+  },
+  {
+    "id": "617.2",
+    "edt": "",
+    "nombre": "Estructuración de Tabique",
+    "cantidad": 33873.0,
+    "unidad": "m2",
+    "ponderacion": 0.0023794669678533675
+  },
+  {
+    "id": "617.3",
+    "edt": "",
+    "nombre": "Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)",
+    "cantidad": 33873.0,
+    "unidad": "m2",
+    "ponderacion": 0.0011897334839266838
+  },
+  {
+    "id": "617.4",
+    "edt": "",
+    "nombre": "Montaje de Aislación de tabique",
+    "cantidad": 33873.0,
+    "unidad": "m2",
+    "ponderacion": 0.0005948667419633419
+  },
+  {
+    "id": "617.5",
+    "edt": "",
+    "nombre": "Instalación de Segunda Cara",
+    "cantidad": 33873.0,
+    "unidad": "m2",
+    "ponderacion": 0.0011897334839266838
+  },
+  {
+    "id": "618.2",
+    "edt": "",
+    "nombre": "Estructuración de Tabique",
+    "cantidad": 26340.0,
+    "unidad": "m2",
+    "ponderacion": 0.0018502984658358486
+  },
+  {
+    "id": "618.3",
+    "edt": "",
+    "nombre": "Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)",
+    "cantidad": 26340.0,
+    "unidad": "m2",
+    "ponderacion": 0.0009251492329179243
+  },
+  {
+    "id": "618.4",
+    "edt": "",
+    "nombre": "Montaje de Aislación de tabique",
+    "cantidad": 26340.0,
+    "unidad": "m2",
+    "ponderacion": 0.00046257461645896216
+  },
+  {
+    "id": "618.5",
+    "edt": "",
+    "nombre": "Instalación de Segunda Cara",
+    "cantidad": 26340.0,
+    "unidad": "m2",
+    "ponderacion": 0.0009251492329179243
+  },
+  {
+    "id": "619.2",
+    "edt": "",
+    "nombre": "Estructuración de Tabique",
+    "cantidad": 18938.0,
+    "unidad": "m2",
+    "ponderacion": 0.0013303322834472022
+  },
+  {
+    "id": "619.3",
+    "edt": "",
+    "nombre": "Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)",
+    "cantidad": 18938.0,
+    "unidad": "m2",
+    "ponderacion": 0.0006651661417236011
+  },
+  {
+    "id": "619.4",
+    "edt": "",
+    "nombre": "Montaje de Aislación de tabique",
+    "cantidad": 18938.0,
+    "unidad": "m2",
+    "ponderacion": 0.00033258307086180054
+  },
+  {
+    "id": "619.5",
+    "edt": "",
+    "nombre": "Instalación de Segunda Cara",
+    "cantidad": 18938.0,
+    "unidad": "m2",
+    "ponderacion": 0.0006651661417236011
+  },
+  {
+    "id": "620.2",
+    "edt": "",
+    "nombre": "Estructuración de Tabique",
+    "cantidad": 14334.0,
+    "unidad": "m2",
+    "ponderacion": 0.0010069164088569117
+  },
+  {
+    "id": "620.3",
+    "edt": "",
+    "nombre": "Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)",
+    "cantidad": 14334.0,
+    "unidad": "m2",
+    "ponderacion": 0.0005034582044284559
+  },
+  {
+    "id": "620.4",
+    "edt": "",
+    "nombre": "Montaje de Aislación de tabique",
+    "cantidad": 14334.0,
+    "unidad": "m2",
+    "ponderacion": 0.00025172910221422793
+  },
+  {
+    "id": "620.5",
+    "edt": "",
+    "nombre": "Instalación de Segunda Cara",
+    "cantidad": 14334.0,
+    "unidad": "m2",
+    "ponderacion": 0.0005034582044284559
+  },
+  {
+    "id": "621.2",
+    "edt": "",
+    "nombre": "Estructuración de Tabique",
+    "cantidad": 13969.0,
+    "unidad": "m2",
+    "ponderacion": 0.000981276357982573
+  },
+  {
+    "id": "621.3",
+    "edt": "",
+    "nombre": "Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)",
+    "cantidad": 13969.0,
+    "unidad": "m2",
+    "ponderacion": 0.0004906381789912865
+  },
+  {
+    "id": "621.4",
+    "edt": "",
+    "nombre": "Montaje de Aislación de tabique",
+    "cantidad": 13969.0,
+    "unidad": "m2",
+    "ponderacion": 0.00024531908949564324
+  },
+  {
+    "id": "621.5",
+    "edt": "",
+    "nombre": "Instalación de Segunda Cara",
+    "cantidad": 13969.0,
+    "unidad": "m2",
+    "ponderacion": 0.0004906381789912865
+  },
+  {
+    "id": "622.2",
+    "edt": "",
+    "nombre": "Estructuración de Tabique",
+    "cantidad": 14299.0,
+    "unidad": "m2",
+    "ponderacion": 0.0010044577738415644
+  },
+  {
+    "id": "622.3",
+    "edt": "",
+    "nombre": "Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)",
+    "cantidad": 14299.0,
+    "unidad": "m2",
+    "ponderacion": 0.0005022288869207822
+  },
+  {
+    "id": "622.4",
+    "edt": "",
+    "nombre": "Montaje de Aislación de tabique",
+    "cantidad": 14299.0,
+    "unidad": "m2",
+    "ponderacion": 0.0002511144434603911
+  },
+  {
+    "id": "622.5",
+    "edt": "",
+    "nombre": "Instalación de Segunda Cara",
+    "cantidad": 14299.0,
+    "unidad": "m2",
+    "ponderacion": 0.0005022288869207822
+  },
+  {
+    "id": "623.2",
+    "edt": "",
+    "nombre": "Estructuración de Tabique",
+    "cantidad": 4056.0,
+    "unidad": "m2",
+    "ponderacion": 0.00028492067492142
+  },
+  {
+    "id": "623.3",
+    "edt": "",
+    "nombre": "Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)",
+    "cantidad": 4056.0,
+    "unidad": "m2",
+    "ponderacion": 0.00014246033746071
+  },
+  {
+    "id": "623.4",
+    "edt": "",
+    "nombre": "Montaje de Aislación de tabique",
+    "cantidad": 4056.0,
+    "unidad": "m2",
+    "ponderacion": 7.1230168730355e-05
+  },
+  {
+    "id": "623.5",
+    "edt": "",
+    "nombre": "Instalación de Segunda Cara",
+    "cantidad": 4056.0,
+    "unidad": "m2",
+    "ponderacion": 0.00014246033746071
+  },
+  {
+    "id": "625.1",
+    "edt": "",
+    "nombre": "Cielos Registrables (metálicos, de aluminio, HPL color madera)",
+    "cantidad": 58.0,
+    "unidad": "m2",
+    "ponderacion": 2.009488906726568e-05
+  },
+  {
+    "id": "626.1",
+    "edt": "",
+    "nombre": "Cielos Registrables (metálicos, de aluminio, HPL color madera)",
+    "cantidad": 8305.0,
+    "unidad": "m2",
+    "ponderacion": 0.0028773802362696806
+  },
+  {
+    "id": "626.2.1",
+    "edt": "",
+    "nombre": "Estructuración de Cielo",
+    "cantidad": 10962.0,
+    "unidad": "m2",
+    "ponderacion": 0.0018989670168566065
+  },
+  {
+    "id": "626.2.2",
+    "edt": "",
+    "nombre": "Aislación de Cielo",
+    "cantidad": 10962.0,
+    "unidad": "m2",
+    "ponderacion": 0.00037979340337132133
+  },
+  {
+    "id": "626.2.3",
+    "edt": "",
+    "nombre": "Tapado de Cielo",
+    "cantidad": 10962.0,
+    "unidad": "m2",
+    "ponderacion": 0.0015191736134852853
+  },
+  {
+    "id": "627.1",
+    "edt": "",
+    "nombre": "Cielos Registrables (metálicos, de aluminio, HPL color madera)",
+    "cantidad": 7313.0,
+    "unidad": "m2",
+    "ponderacion": 0.0025336883404985153
+  },
+  {
+    "id": "627.2.1",
+    "edt": "",
+    "nombre": "Estructuración de Cielo",
+    "cantidad": 9427.0,
+    "unidad": "m2",
+    "ponderacion": 0.0016330562003199444
+  },
+  {
+    "id": "627.2.2",
+    "edt": "",
+    "nombre": "Aislación de Cielo",
+    "cantidad": 9427.0,
+    "unidad": "m2",
+    "ponderacion": 0.00032661124006398896
+  },
+  {
+    "id": "627.2.3",
+    "edt": "",
+    "nombre": "Tapado de Cielo",
+    "cantidad": 9427.0,
+    "unidad": "m2",
+    "ponderacion": 0.0013064449602559558
+  },
+  {
+    "id": "628.1",
+    "edt": "",
+    "nombre": "Cielos Registrables (metálicos, de aluminio, HPL color madera)",
+    "cantidad": 4297.0,
+    "unidad": "m2",
+    "ponderacion": 0.0014887541090007
+  },
+  {
+    "id": "628.2.1",
+    "edt": "",
+    "nombre": "Estructuración de Cielo",
+    "cantidad": 8730.0,
+    "unidad": "m2",
+    "ponderacion": 0.0015123136341140461
+  },
+  {
+    "id": "628.2.2",
+    "edt": "",
+    "nombre": "Aislación de Cielo",
+    "cantidad": 8730.0,
+    "unidad": "m2",
+    "ponderacion": 0.0003024627268228093
+  },
+  {
+    "id": "628.2.3",
+    "edt": "",
+    "nombre": "Tapado de Cielo",
+    "cantidad": 8730.0,
+    "unidad": "m2",
+    "ponderacion": 0.001209850907291237
+  },
+  {
+    "id": "629.1",
+    "edt": "",
+    "nombre": "Cielos Registrables (metálicos, de aluminio, HPL color madera)",
+    "cantidad": 5847.0,
+    "unidad": "m2",
+    "ponderacion": 0.002025772696143145
+  },
+  {
+    "id": "629.2.1",
+    "edt": "",
+    "nombre": "Estructuración de Cielo",
+    "cantidad": 3041.0,
+    "unidad": "m2",
+    "ponderacion": 0.000526797910806508
+  },
+  {
+    "id": "629.2.2",
+    "edt": "",
+    "nombre": "Aislación de Cielo",
+    "cantidad": 3041.0,
+    "unidad": "m2",
+    "ponderacion": 0.0001053595821613016
+  },
+  {
+    "id": "629.2.3",
+    "edt": "",
+    "nombre": "Tapado de Cielo",
+    "cantidad": 3041.0,
+    "unidad": "m2",
+    "ponderacion": 0.0004214383286452064
+  },
+  {
+    "id": "630.1",
+    "edt": "",
+    "nombre": "Cielos Registrables (metálicos, de aluminio, HPL color madera)",
+    "cantidad": 3759.0,
+    "unidad": "m2",
+    "ponderacion": 0.0013023566897215808
+  },
+  {
+    "id": "630.2.1",
+    "edt": "",
+    "nombre": "Estructuración de Cielo",
+    "cantidad": 3950.0,
+    "unidad": "m2",
+    "ponderacion": 0.0006842656191008572
+  },
+  {
+    "id": "630.2.2",
+    "edt": "",
+    "nombre": "Aislación de Cielo",
+    "cantidad": 3950.0,
+    "unidad": "m2",
+    "ponderacion": 0.00013685312382017144
+  },
+  {
+    "id": "630.2.3",
+    "edt": "",
+    "nombre": "Tapado de Cielo",
+    "cantidad": 3950.0,
+    "unidad": "m2",
+    "ponderacion": 0.0005474124952806858
+  },
+  {
+    "id": "631.1",
+    "edt": "",
+    "nombre": "Cielos Registrables (metálicos, de aluminio, HPL color madera)",
+    "cantidad": 3600.0,
+    "unidad": "m2",
+    "ponderacion": 0.0012472689765889043
+  },
+  {
+    "id": "631.2.1",
+    "edt": "",
+    "nombre": "Estructuración de Cielo",
+    "cantidad": 3889.0,
+    "unidad": "m2",
+    "ponderacion": 0.0006736984791603124
+  },
+  {
+    "id": "631.2.2",
+    "edt": "",
+    "nombre": "Aislación de Cielo",
+    "cantidad": 3889.0,
+    "unidad": "m2",
+    "ponderacion": 0.00013473969583206245
+  },
+  {
+    "id": "631.2.3",
+    "edt": "",
+    "nombre": "Tapado de Cielo",
+    "cantidad": 3889.0,
+    "unidad": "m2",
+    "ponderacion": 0.0005389587833282498
+  },
+  {
+    "id": "632.1",
+    "edt": "",
+    "nombre": "Cielos Registrables (metálicos, de aluminio, HPL color madera)",
+    "cantidad": 3604.0,
+    "unidad": "m2",
+    "ponderacion": 0.0012486548310073364
+  },
+  {
+    "id": "632.2.1",
+    "edt": "",
+    "nombre": "Estructuración de Cielo",
+    "cantidad": 3875.0,
+    "unidad": "m2",
+    "ponderacion": 0.0006712732339280561
+  },
+  {
+    "id": "632.2.2",
+    "edt": "",
+    "nombre": "Aislación de Cielo",
+    "cantidad": 3875.0,
+    "unidad": "m2",
+    "ponderacion": 0.00013425464678561123
+  },
+  {
+    "id": "632.2.3",
+    "edt": "",
+    "nombre": "Tapado de Cielo",
+    "cantidad": 3875.0,
+    "unidad": "m2",
+    "ponderacion": 0.0005370185871424449
+  },
+  {
+    "id": "634.1",
+    "edt": "",
+    "nombre": "Decorativos y Seguridad (rev. Acolchado, metálicos, madera)",
+    "cantidad": 65.0,
+    "unidad": "m2",
+    "ponderacion": 3.2749781463324506e-05
+  },
+  {
+    "id": "634.2",
+    "edt": "",
+    "nombre": "Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos",
+    "cantidad": 65.7,
+    "unidad": "m2",
+    "ponderacion": 3.310247141754492e-05
+  },
+  {
+    "id": "635.1",
+    "edt": "",
+    "nombre": "De Piezas Rigidas En Paramentos Verticales (cerámicas y porcelanatos)",
+    "cantidad": 6628.0,
+    "unidad": "m2",
+    "ponderacion": 0.003339470023675613
+  },
+  {
+    "id": "635.2",
+    "edt": "",
+    "nombre": "Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos",
+    "cantidad": 65.7,
+    "unidad": "m2",
+    "ponderacion": 3.310247141754493e-05
+  },
+  {
+    "id": "635.3",
+    "edt": "",
+    "nombre": "Decorativos y Seguridad (rev. Acolchado, metálicos, madera)",
+    "cantidad": 1519.0,
+    "unidad": "m2",
+    "ponderacion": 0.0007653372006583065
+  },
+  {
+    "id": "635.4",
+    "edt": "",
+    "nombre": "Placas Laminadas de Alta Presión (HPL)",
+    "cantidad": 2302.0,
+    "unidad": "m2",
+    "ponderacion": 0.001159846106593431
+  },
+  {
+    "id": "636.1",
+    "edt": "",
+    "nombre": "De Piezas Rigidas En Paramentos Verticales (cerámicas y porcelanatos)",
+    "cantidad": 4006.0,
+    "unidad": "m2",
+    "ponderacion": 0.0020183942237242767
+  },
+  {
+    "id": "636.2",
+    "edt": "",
+    "nombre": "Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos",
+    "cantidad": 65.7,
+    "unidad": "m2",
+    "ponderacion": 3.310247141754493e-05
+  },
+  {
+    "id": "636.3",
+    "edt": "",
+    "nombre": "Decorativos y Seguridad (rev. Acolchado, metálicos, madera)",
+    "cantidad": 1442.0,
+    "unidad": "m2",
+    "ponderacion": 0.0007265413056940607
+  },
+  {
+    "id": "636.4",
+    "edt": "",
+    "nombre": "Placas Laminadas de Alta Presión (HPL)",
+    "cantidad": 3272.0,
+    "unidad": "m2",
+    "ponderacion": 0.0016485736145845813
+  },
+  {
+    "id": "637.1",
+    "edt": "",
+    "nombre": "De Piezas Rigidas En Paramentos Verticales (cerámicas y porcelanatos)",
+    "cantidad": 3031.0,
+    "unidad": "m2",
+    "ponderacion": 0.0015271475017744093
+  },
+  {
+    "id": "637.2",
+    "edt": "",
+    "nombre": "Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos",
+    "cantidad": 4.5,
+    "unidad": "m2",
+    "ponderacion": 2.2672925628455432e-06
+  },
+  {
+    "id": "637.3",
+    "edt": "",
+    "nombre": "Decorativos y Seguridad (rev. Acolchado, metálicos, madera)",
+    "cantidad": 904.0,
+    "unidad": "m2",
+    "ponderacion": 0.00045547388373608244
+  },
+  {
+    "id": "637.4",
+    "edt": "",
+    "nombre": "Placas Laminadas de Alta Presión (HPL)",
+    "cantidad": 2989.0,
+    "unidad": "m2",
+    "ponderacion": 0.0015059861045211842
+  },
+  {
+    "id": "638.1",
+    "edt": "",
+    "nombre": "De Piezas Rigidas En Paramentos Verticales (cerámicas y porcelanatos)",
+    "cantidad": 2291.0,
+    "unidad": "m2",
+    "ponderacion": 0.001154303835884253
+  },
+  {
+    "id": "638.2",
+    "edt": "",
+    "nombre": "Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos",
+    "cantidad": 4.5,
+    "unidad": "m2",
+    "ponderacion": 2.2672925628455424e-06
+  },
+  {
+    "id": "638.3",
+    "edt": "",
+    "nombre": "Decorativos y Seguridad (rev. Acolchado, metálicos, madera)",
+    "cantidad": 851.0,
+    "unidad": "m2",
+    "ponderacion": 0.00042877021577367934
+  },
+  {
+    "id": "638.4",
+    "edt": "",
+    "nombre": "Placas Laminadas de Alta Presión (HPL)",
+    "cantidad": 1112.0,
+    "unidad": "m2",
+    "ponderacion": 0.0005602731844187208
+  },
+  {
+    "id": "639.1",
+    "edt": "",
+    "nombre": "De Piezas Rigidas En Paramentos Verticales (cerámicas y porcelanatos)",
+    "cantidad": 3451.0,
+    "unidad": "m2",
+    "ponderacion": 0.00173876147430666
+  },
+  {
+    "id": "639.2",
+    "edt": "",
+    "nombre": "Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos",
+    "cantidad": 4.5,
+    "unidad": "m2",
+    "ponderacion": 2.2672925628455432e-06
+  },
+  {
+    "id": "639.3",
+    "edt": "",
+    "nombre": "Decorativos y Seguridad (rev. Acolchado, metálicos, madera)",
+    "cantidad": 494.0,
+    "unidad": "m2",
+    "ponderacion": 0.0002488983391212663
+  },
+  {
+    "id": "639.4",
+    "edt": "",
+    "nombre": "Placas Laminadas de Alta Presión (HPL)",
+    "cantidad": 2655.0,
+    "unidad": "m2",
+    "ponderacion": 0.0013377026120788705
+  },
+  {
+    "id": "640.1",
+    "edt": "",
+    "nombre": "De Piezas Rigidas En Paramentos Verticales (cerámicas y porcelanatos)",
+    "cantidad": 3645.0,
+    "unidad": "m2",
+    "ponderacion": 0.0018365069759048898
+  },
+  {
+    "id": "640.2",
+    "edt": "",
+    "nombre": "Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos",
+    "cantidad": 4.5,
+    "unidad": "m2",
+    "ponderacion": 2.2672925628455432e-06
+  },
+  {
+    "id": "640.3",
+    "edt": "",
+    "nombre": "Decorativos y Seguridad (rev. Acolchado, metálicos, madera)",
+    "cantidad": 526.0,
+    "unidad": "m2",
+    "ponderacion": 0.0002650213084570568
+  },
+  {
+    "id": "640.4",
+    "edt": "",
+    "nombre": "Placas Laminadas de Alta Presión (HPL)",
+    "cantidad": 2614.0,
+    "unidad": "m2",
+    "ponderacion": 0.0013170450576173887
+  },
+  {
+    "id": "641.1",
+    "edt": "",
+    "nombre": "De Piezas Rigidas En Paramentos Verticales (cerámicas y porcelanatos)",
+    "cantidad": 3613.0,
+    "unidad": "m2",
+    "ponderacion": 0.0018203840065690994
+  },
+  {
+    "id": "641.2",
+    "edt": "",
+    "nombre": "Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos",
+    "cantidad": 4.5,
+    "unidad": "m2",
+    "ponderacion": 2.2672925628455432e-06
+  },
+  {
+    "id": "641.3",
+    "edt": "",
+    "nombre": "Decorativos y Seguridad (rev. Acolchado, metálicos, madera)",
+    "cantidad": 549.0,
+    "unidad": "m2",
+    "ponderacion": 0.0002766096926671563
+  },
+  {
+    "id": "641.4",
+    "edt": "",
+    "nombre": "Placas Laminadas de Alta Presión (HPL)",
+    "cantidad": 2576.0,
+    "unidad": "m2",
+    "ponderacion": 0.0012978990315311377
+  },
+  {
+    "id": "663.1",
+    "edt": "",
+    "nombre": "Ventanas Especiales con Montantes",
+    "cantidad": 6.0,
+    "unidad": "c/u",
+    "ponderacion": 4.798265838398696e-06
+  },
+  {
+    "id": "664.1",
+    "edt": "",
+    "nombre": "Ventanas de Aluminio",
+    "cantidad": 455.0,
+    "unidad": "c/u",
+    "ponderacion": 0.0003638684927452344
+  },
+  {
+    "id": "664.2",
+    "edt": "",
+    "nombre": "Ventanas Especiales con Montantes",
+    "cantidad": 58.0,
+    "unidad": "c/u",
+    "ponderacion": 4.6383236437854057e-05
+  },
+  {
+    "id": "664.3",
+    "edt": "",
+    "nombre": "Ventana Termopanel Micropersiana",
+    "cantidad": 2.0,
+    "unidad": "c/u",
+    "ponderacion": 1.599421946132899e-06
+  },
+  {
+    "id": "665.1",
+    "edt": "",
+    "nombre": "Ventanas de Aluminio",
+    "cantidad": 480.0,
+    "unidad": "c/u",
+    "ponderacion": 0.00038386126707189573
+  },
+  {
+    "id": "665.2",
+    "edt": "",
+    "nombre": "Ventanas Especiales con Montantes",
+    "cantidad": 51.0,
+    "unidad": "c/u",
+    "ponderacion": 4.078525962638892e-05
+  },
+  {
+    "id": "665.3",
+    "edt": "",
+    "nombre": "Ventana Interior de Seguridad",
+    "cantidad": 6.0,
+    "unidad": "c/u",
+    "ponderacion": 4.798265838398697e-06
+  },
+  {
+    "id": "666.1",
+    "edt": "",
+    "nombre": "Ventanas de Aluminio",
+    "cantidad": 342.0,
+    "unidad": "c/u",
+    "ponderacion": 0.0002735011527887257
+  },
+  {
+    "id": "666.2",
+    "edt": "",
+    "nombre": "Ventanas Especiales con Montantes",
+    "cantidad": 13.0,
+    "unidad": "c/u",
+    "ponderacion": 1.0396242649863842e-05
+  },
+  {
+    "id": "666.3",
+    "edt": "",
+    "nombre": "Ventana Interior de Seguridad",
+    "cantidad": 1.0,
+    "unidad": "c/u",
+    "ponderacion": 7.997109730664495e-07
+  },
+  {
+    "id": "666.4",
+    "edt": "",
+    "nombre": "Ventana Termopanel Micropersiana",
+    "cantidad": 57.0,
+    "unidad": "c/u",
+    "ponderacion": 4.5583525464787615e-05
+  },
+  {
+    "id": "667.1",
+    "edt": "",
+    "nombre": "Ventanas de Aluminio",
+    "cantidad": 292.0,
+    "unidad": "c/u",
+    "ponderacion": 0.00023351560413540322
+  },
+  {
+    "id": "667.2",
+    "edt": "",
+    "nombre": "Ventanas Especiales con Montantes",
+    "cantidad": 78.0,
+    "unidad": "c/u",
+    "ponderacion": 6.237745589918306e-05
+  },
+  {
+    "id": "668.1",
+    "edt": "",
+    "nombre": "Ventanas de Aluminio",
+    "cantidad": 272.0,
+    "unidad": "c/u",
+    "ponderacion": 0.00021752138467407426
+  },
+  {
+    "id": "669.1",
+    "edt": "",
+    "nombre": "Ventanas de Aluminio",
+    "cantidad": 264.0,
+    "unidad": "c/u",
+    "ponderacion": 0.00021112369688954265
+  },
+  {
+    "id": "669.2",
+    "edt": "",
+    "nombre": "Ventana Termopanel Micropersiana",
+    "cantidad": 2.0,
+    "unidad": "c/u",
+    "ponderacion": 1.599421946132899e-06
+  },
+  {
+    "id": "670.1",
+    "edt": "",
+    "nombre": "Ventanas de Aluminio",
+    "cantidad": 276.0,
+    "unidad": "c/u",
+    "ponderacion": 0.00022072022856634005
+  },
+  {
+    "id": "672.1",
+    "edt": "",
+    "nombre": "Puertas Cortafuegos",
+    "cantidad": 11.0,
+    "unidad": "c/u",
+    "ponderacion": 2.0400247989587342e-05
+  },
+  {
+    "id": "672.2",
+    "edt": "",
+    "nombre": "Puertas de Madera",
+    "cantidad": 6.0,
+    "unidad": "c/u",
+    "ponderacion": 1.1127407994320366e-05
+  },
+  {
+    "id": "672.3",
+    "edt": "",
+    "nombre": "Puertas Vidriadas, automáticas, de acero y de aluminio",
+    "cantidad": 2.0,
+    "unidad": "c/u",
+    "ponderacion": 3.709135998106789e-06
+  },
+  {
+    "id": "672.4",
+    "edt": "",
+    "nombre": "Puertas de Registro de Instalaciones",
+    "cantidad": 2.0,
+    "unidad": "c/u",
+    "ponderacion": 3.709135998106789e-06
+  },
+  {
+    "id": "673.1",
+    "edt": "",
+    "nombre": "Puertas Exteriores",
+    "cantidad": 62.0,
+    "unidad": "c/u",
+    "ponderacion": 0.00011498321594131045
+  },
+  {
+    "id": "673.2",
+    "edt": "",
+    "nombre": "Puertas Cortafuegos",
+    "cantidad": 48.0,
+    "unidad": "c/u",
+    "ponderacion": 8.901926395456293e-05
+  },
+  {
+    "id": "673.3",
+    "edt": "",
+    "nombre": "Puertas de Garaje",
+    "cantidad": 1.0,
+    "unidad": "c/u",
+    "ponderacion": 1.8545679990533945e-06
+  },
+  {
+    "id": "673.4",
+    "edt": "",
+    "nombre": "Puertas de Uso Industrial",
+    "cantidad": 8.0,
+    "unidad": "c/u",
+    "ponderacion": 1.4836543992427156e-05
+  },
+  {
+    "id": "673.5",
+    "edt": "",
+    "nombre": "Puertas HPL",
+    "cantidad": 157.0,
+    "unidad": "c/u",
+    "ponderacion": 0.00029116717585138293
+  },
+  {
+    "id": "673.6",
+    "edt": "",
+    "nombre": "Puertas de Madera",
+    "cantidad": 718.0,
+    "unidad": "c/u",
+    "ponderacion": 0.0013315798233203373
+  },
+  {
+    "id": "673.7",
+    "edt": "",
+    "nombre": "Puertas Vidriadas, automáticas, de acero y de aluminio",
+    "cantidad": 6.0,
+    "unidad": "c/u",
+    "ponderacion": 1.1127407994320366e-05
+  },
+  {
+    "id": "673.8",
+    "edt": "",
+    "nombre": "Puertas de Registro de Instalaciones",
+    "cantidad": 57.0,
+    "unidad": "c/u",
+    "ponderacion": 0.0001057103759460435
+  },
+  {
+    "id": "674.1",
+    "edt": "",
+    "nombre": "Puertas Exteriores",
+    "cantidad": 20.0,
+    "unidad": "c/u",
+    "ponderacion": 3.7091359981067884e-05
+  },
+  {
+    "id": "674.2",
+    "edt": "",
+    "nombre": "Puertas Cortafuegos",
+    "cantidad": 44.0,
+    "unidad": "c/u",
+    "ponderacion": 8.160099195834934e-05
+  },
+  {
+    "id": "674.3",
+    "edt": "",
+    "nombre": "Puertas HPL",
+    "cantidad": 58.0,
+    "unidad": "c/u",
+    "ponderacion": 0.00010756494394509687
+  },
+  {
+    "id": "674.4",
+    "edt": "",
+    "nombre": "Puertas de Madera",
+    "cantidad": 794.0,
+    "unidad": "c/u",
+    "ponderacion": 0.001472526991248395
+  },
+  {
+    "id": "674.5",
+    "edt": "",
+    "nombre": "Puertas Vidriadas, automáticas, de acero y de aluminio",
+    "cantidad": 15.0,
+    "unidad": "c/u",
+    "ponderacion": 2.7818519985800915e-05
+  },
+  {
+    "id": "674.6",
+    "edt": "",
+    "nombre": "Puertas de Registro de Instalaciones",
+    "cantidad": 54.0,
+    "unidad": "c/u",
+    "ponderacion": 0.0001001466719488833
+  },
+  {
+    "id": "675.1",
+    "edt": "",
+    "nombre": "Puertas Exteriores",
+    "cantidad": 17.0,
+    "unidad": "c/u",
+    "ponderacion": 3.15276559839077e-05
+  },
+  {
+    "id": "675.2",
+    "edt": "",
+    "nombre": "Puertas Cortafuegos",
+    "cantidad": 34.0,
+    "unidad": "c/u",
+    "ponderacion": 6.30553119678154e-05
+  },
+  {
+    "id": "675.3",
+    "edt": "",
+    "nombre": "Puertas HPL",
+    "cantidad": 76.0,
+    "unidad": "c/u",
+    "ponderacion": 0.00014094716792805798
+  },
+  {
+    "id": "675.4",
+    "edt": "",
+    "nombre": "Puertas de Madera",
+    "cantidad": 408.0,
+    "unidad": "c/u",
+    "ponderacion": 0.0007566637436137848
+  },
+  {
+    "id": "675.5",
+    "edt": "",
+    "nombre": "Puertas Vidriadas, automáticas, de acero y de aluminio",
+    "cantidad": 92.0,
+    "unidad": "c/u",
+    "ponderacion": 0.00017062025591291227
+  },
+  {
+    "id": "675.6",
+    "edt": "",
+    "nombre": "Puertas de Registro de Instalaciones",
+    "cantidad": 39.0,
+    "unidad": "c/u",
+    "ponderacion": 7.232815196308238e-05
+  },
+  {
+    "id": "676.1",
+    "edt": "",
+    "nombre": "Puertas Exteriores",
+    "cantidad": 10.0,
+    "unidad": "c/u",
+    "ponderacion": 1.8545679990533946e-05
+  },
+  {
+    "id": "676.2",
+    "edt": "",
+    "nombre": "Puertas Cortafuegos",
+    "cantidad": 23.0,
+    "unidad": "c/u",
+    "ponderacion": 4.265506397822807e-05
+  },
+  {
+    "id": "676.3",
+    "edt": "",
+    "nombre": "Puertas de Uso Industrial",
+    "cantidad": 1.0,
+    "unidad": "c/u",
+    "ponderacion": 1.8545679990533945e-06
+  },
+  {
+    "id": "676.4",
+    "edt": "",
+    "nombre": "Puertas HPL",
+    "cantidad": 30.0,
+    "unidad": "c/u",
+    "ponderacion": 5.563703997160183e-05
+  },
+  {
+    "id": "676.5",
+    "edt": "",
+    "nombre": "Puertas de Madera",
+    "cantidad": 378.0,
+    "unidad": "c/u",
+    "ponderacion": 0.0007010267036421831
+  },
+  {
+    "id": "676.6",
+    "edt": "",
+    "nombre": "Puertas Vidriadas, automáticas, de acero y de aluminio",
+    "cantidad": 1.0,
+    "unidad": "c/u",
+    "ponderacion": 1.8545679990533945e-06
+  },
+  {
+    "id": "676.7",
+    "edt": "",
+    "nombre": "Puertas de Registro de Instalaciones",
+    "cantidad": 40.0,
+    "unidad": "c/u",
+    "ponderacion": 7.418271996213578e-05
+  },
+  {
+    "id": "677.1",
+    "edt": "",
+    "nombre": "Puertas Exteriores",
+    "cantidad": 12.0,
+    "unidad": "c/u",
+    "ponderacion": 2.2254815988640732e-05
+  },
+  {
+    "id": "677.2",
+    "edt": "",
+    "nombre": "Puertas Cortafuegos",
+    "cantidad": 16.0,
+    "unidad": "c/u",
+    "ponderacion": 2.967308798485431e-05
+  },
+  {
+    "id": "677.3",
+    "edt": "",
+    "nombre": "Puertas de Madera",
+    "cantidad": 345.0,
+    "unidad": "c/u",
+    "ponderacion": 0.0006398259596734211
+  },
+  {
+    "id": "677.4",
+    "edt": "",
+    "nombre": "Puertas de Registro de Instalaciones",
+    "cantidad": 33.0,
+    "unidad": "c/u",
+    "ponderacion": 6.120074396876203e-05
+  },
+  {
+    "id": "678.1",
+    "edt": "",
+    "nombre": "Puertas Exteriores",
+    "cantidad": 7.0,
+    "unidad": "c/u",
+    "ponderacion": 1.2981975993373761e-05
+  },
+  {
+    "id": "678.2",
+    "edt": "",
+    "nombre": "Puertas Cortafuegos",
+    "cantidad": 17.0,
+    "unidad": "c/u",
+    "ponderacion": 3.152765598390771e-05
+  },
+  {
+    "id": "678.3",
+    "edt": "",
+    "nombre": "Puertas de Madera",
+    "cantidad": 339.0,
+    "unidad": "c/u",
+    "ponderacion": 0.0006286985516791007
+  },
+  {
+    "id": "678.4",
+    "edt": "",
+    "nombre": "Puertas Vidriadas, automáticas, de acero y de aluminio",
+    "cantidad": 1.0,
+    "unidad": "c/u",
+    "ponderacion": 1.8545679990533945e-06
+  },
+  {
+    "id": "678.5",
+    "edt": "",
+    "nombre": "Puertas de Registro de Instalaciones",
+    "cantidad": 33.0,
+    "unidad": "c/u",
+    "ponderacion": 6.120074396876203e-05
+  },
+  {
+    "id": "679.1",
+    "edt": "",
+    "nombre": "Puertas Exteriores",
+    "cantidad": 6.0,
+    "unidad": "c/u",
+    "ponderacion": 1.1127407994320366e-05
+  },
+  {
+    "id": "679.2",
+    "edt": "",
+    "nombre": "Puertas Cortafuegos",
+    "cantidad": 17.0,
+    "unidad": "c/u",
+    "ponderacion": 3.15276559839077e-05
+  },
+  {
+    "id": "679.3",
+    "edt": "",
+    "nombre": "Puertas de Madera",
+    "cantidad": 347.0,
+    "unidad": "c/u",
+    "ponderacion": 0.000643535095671528
+  },
+  {
+    "id": "679.4",
+    "edt": "",
+    "nombre": "Puertas de Registro de Instalaciones",
+    "cantidad": 35.0,
+    "unidad": "c/u",
+    "ponderacion": 6.49098799668688e-05
+  },
+  {
+    "id": "680.1",
+    "edt": "",
+    "nombre": "Puertas Exteriores",
+    "cantidad": 3.0,
+    "unidad": "c/u",
+    "ponderacion": 5.563703997160184e-06
+  },
+  {
+    "id": "680.2",
+    "edt": "",
+    "nombre": "Puertas Cortafuegos",
+    "cantidad": 3.0,
+    "unidad": "c/u",
+    "ponderacion": 5.563703997160184e-06
+  },
+  {
+    "id": "680.3",
+    "edt": "",
+    "nombre": "Puertas de Madera",
+    "cantidad": 1.0,
+    "unidad": "c/u",
+    "ponderacion": 1.8545679990533945e-06
+  },
+  {
+    "id": "680.4",
+    "edt": "",
+    "nombre": "Puertas Vidriadas, automáticas, de acero y de aluminio",
+    "cantidad": 17.0,
+    "unidad": "c/u",
+    "ponderacion": 3.152765598390771e-05
+  },
+  {
+    "id": "680.5",
+    "edt": "",
+    "nombre": "Puertas de Registro de Instalaciones",
+    "cantidad": 9.0,
+    "unidad": "c/u",
+    "ponderacion": 1.669111199148055e-05
+  },
+  {
+    "id": "728.1",
+    "edt": "1.7.15.1.1",
+    "nombre": "Componentes de Cubiertas Inclinadas (de plancha policarbonato, de Zinc)",
+    "cantidad": 1.0,
+    "unidad": "m2",
+    "ponderacion": 2.2152578261693742e-07
+  },
+  {
+    "id": "729.1.1",
+    "edt": "1.7.15.2.1.1",
+    "nombre": "Impermeabilización",
+    "cantidad": 3392.0,
+    "unidad": "m2",
+    "ponderacion": 0.0003005661818546608
+  },
+  {
+    "id": "729.1.2",
+    "edt": "1.7.15.2.1.2",
+    "nombre": "Instalación de Aislapol",
+    "cantidad": 3392.0,
+    "unidad": "m2",
+    "ponderacion": 0.00011271231819549777
+  },
+  {
+    "id": "729.1.3",
+    "edt": "1.7.15.2.1.3",
+    "nombre": "Sobrelosa",
+    "cantidad": 3392.0,
+    "unidad": "m2",
+    "ponderacion": 0.00018785386365916296
+  },
+  {
+    "id": "729.1.4",
+    "edt": "1.7.15.2.1.4",
+    "nombre": "Impermeabilización + mortero de Protección",
+    "cantidad": 3392.0,
+    "unidad": "m2",
+    "ponderacion": 0.0001502830909273304
+  },
+  {
+    "id": "730.1.1",
+    "edt": "1.7.15.3.1.1",
+    "nombre": "Impermeabilización",
+    "cantidad": 8374.0,
+    "unidad": "",
+    "ponderacion": 0.0007420227614536937
+  },
+  {
+    "id": "730.1.2",
+    "edt": "1.7.15.3.1.2",
+    "nombre": "Instalación de Aislapol",
+    "cantidad": 8374.0,
+    "unidad": "",
+    "ponderacion": 0.0002782585355451351
+  },
+  {
+    "id": "730.1.3",
+    "edt": "1.7.15.3.1.3",
+    "nombre": "Sobrelosa",
+    "cantidad": 8374.0,
+    "unidad": "",
+    "ponderacion": 0.00046376422590855854
+  },
+  {
+    "id": "730.1.4",
+    "edt": "1.7.15.3.1.4",
+    "nombre": "Impermeabilización + mortero de Protección",
+    "cantidad": 8374.0,
+    "unidad": "",
+    "ponderacion": 0.00037101138072684683
+  },
+  {
+    "id": "731.1.1",
+    "edt": "1.7.15.4.1.1",
+    "nombre": "Impermeabilización",
+    "cantidad": 3533.0,
+    "unidad": "m2",
+    "ponderacion": 0.000313060235994256
+  },
+  {
+    "id": "731.1.2",
+    "edt": "1.7.15.4.1.2",
+    "nombre": "Instalación de Aislapol",
+    "cantidad": 3533.0,
+    "unidad": "m2",
+    "ponderacion": 0.00011739758849784598
+  },
+  {
+    "id": "731.1.3",
+    "edt": "1.7.15.4.1.3",
+    "nombre": "Sobrelosa",
+    "cantidad": 3533.0,
+    "unidad": "m2",
+    "ponderacion": 0.00019566264749641
+  },
+  {
+    "id": "731.1.4",
+    "edt": "1.7.15.4.1.4",
+    "nombre": "Impermeabilización + mortero de Protección",
+    "cantidad": 3533.0,
+    "unidad": "m2",
+    "ponderacion": 0.000156530117997128
+  },
+  {
+    "id": "732.1.1",
+    "edt": "1.7.15.5.1.1",
+    "nombre": "Impermeabilización",
+    "cantidad": 6758.0,
+    "unidad": "m2",
+    "ponderacion": 0.0005988284955701053
+  },
+  {
+    "id": "732.1.2",
+    "edt": "1.7.15.5.1.2",
+    "nombre": "Instalación de Aislapol",
+    "cantidad": 6758.0,
+    "unidad": "m2",
+    "ponderacion": 0.00022456068583878944
+  },
+  {
+    "id": "732.1.3",
+    "edt": "1.7.15.5.1.3",
+    "nombre": "Sobrelosa",
+    "cantidad": 6758.0,
+    "unidad": "m2",
+    "ponderacion": 0.00037426780973131576
+  },
+  {
+    "id": "732.1.4",
+    "edt": "1.7.15.5.1.4",
+    "nombre": "Impermeabilización + mortero de Protección",
+    "cantidad": 6758.0,
+    "unidad": "m2",
+    "ponderacion": 0.00029941424778505264
+  },
+  {
+    "id": "733.1.1",
+    "edt": "1.7.15.6.1.1",
+    "nombre": "Impermeabilización",
+    "cantidad": 3206.0,
+    "unidad": "",
+    "ponderacion": 0.0002840846636279605
+  },
+  {
+    "id": "733.1.2",
+    "edt": "1.7.15.6.1.2",
+    "nombre": "Instalación de Aislapol",
+    "cantidad": 3206.0,
+    "unidad": "",
+    "ponderacion": 0.00010653174886048519
+  },
+  {
+    "id": "733.1.3",
+    "edt": "1.7.15.6.1.3",
+    "nombre": "Sobrelosa",
+    "cantidad": 3206.0,
+    "unidad": "",
+    "ponderacion": 0.00017755291476747532
+  },
+  {
+    "id": "733.1.4",
+    "edt": "1.7.15.6.1.4",
+    "nombre": "Impermeabilización + mortero de Protección",
+    "cantidad": 3206.0,
+    "unidad": "",
+    "ponderacion": 0.00014204233181398026
+  },
+  {
+    "id": "734.1.1",
+    "edt": "1.7.15.7.1.1",
+    "nombre": "Impermeabilización",
+    "cantidad": 228.0,
+    "unidad": "",
+    "ponderacion": 2.020315137466469e-05
+  },
+  {
+    "id": "733.1.2",
+    "edt": "1.7.15.7.1.2",
+    "nombre": "Instalación de Aislapol",
+    "cantidad": 228.0,
+    "unidad": "",
+    "ponderacion": 7.576181765499258e-06
+  },
+  {
+    "id": "733.1.3",
+    "edt": "1.7.15.7.1.3",
+    "nombre": "Sobrelosa",
+    "cantidad": 228.0,
+    "unidad": "",
+    "ponderacion": 1.2626969609165431e-05
+  },
+  {
+    "id": "733.1.4",
+    "edt": "1.7.15.7.1.4",
+    "nombre": "Impermeabilización + mortero de Protección",
+    "cantidad": 228.0,
+    "unidad": "",
+    "ponderacion": 1.0101575687332346e-05
+  },
+  {
+    "id": "735.1.1",
+    "edt": "1.7.15.8.1.1",
+    "nombre": "Impermeabilización",
+    "cantidad": 8689.0,
+    "unidad": "",
+    "ponderacion": 0.0007699350100634278
+  },
+  {
+    "id": "735.1.2",
+    "edt": "1.7.15.8.1.2",
+    "nombre": "Instalación de Aislapol",
+    "cantidad": 8689.0,
+    "unidad": "",
+    "ponderacion": 0.0002887256287737854
+  },
+  {
+    "id": "735.1.3",
+    "edt": "1.7.15.8.1.3",
+    "nombre": "Sobrelosa",
+    "cantidad": 8689.0,
+    "unidad": "",
+    "ponderacion": 0.00048120938128964235
+  },
+  {
+    "id": "735.1.4",
+    "edt": "1.7.15.8.1.4",
+    "nombre": "Impermeabilización + mortero de Protección",
+    "cantidad": 8689.0,
+    "unidad": "",
+    "ponderacion": 0.0003849675050317139
+  },
+  {
+    "id": "737.1",
+    "edt": "1.7.16.1.1",
+    "nombre": "Fachadas Ligeras",
+    "cantidad": 162.0,
+    "unidad": "m2",
+    "ponderacion": 7.809980937902498e-05
+  },
+  {
+    "id": "737.2",
+    "edt": "1.7.16.1.2",
+    "nombre": "Muros Cortina",
+    "cantidad": 312.0,
+    "unidad": "m2",
+    "ponderacion": 0.00015041444769293703
+  },
+  {
+    "id": "737.3.1",
+    "edt": "1.7.16.1.3.1",
+    "nombre": "Instalación de Aislapol (incluye elementos según EETT)",
+    "cantidad": 1726.0,
+    "unidad": "m2",
+    "ponderacion": 0.0005824703067391233
+  },
+  {
+    "id": "737.3.2",
+    "edt": "1.7.16.1.3.2",
+    "nombre": "Revestimiento Acrílico según ETTT",
+    "cantidad": 1726.0,
+    "unidad": "m2",
+    "ponderacion": 0.0002496301314596243
+  },
+  {
+    "id": "737.4",
+    "edt": "1.7.16.1.4",
+    "nombre": "Fachadas Ventilada",
+    "cantidad": 3505.0,
+    "unidad": "m2",
+    "ponderacion": 0.0016897520486017447
+  },
+  {
+    "id": "738.1",
+    "edt": "1.7.16.2.1",
+    "nombre": "Muros Cortina",
+    "cantidad": 785.0,
+    "unidad": "m2",
+    "ponderacion": 0.0003784466071761396
+  },
+  {
+    "id": "738.2",
+    "edt": "1.7.16.2.2",
+    "nombre": "Mamparas Y Paredes Moviles",
+    "cantidad": 6.0,
+    "unidad": "c/u",
+    "ponderacion": 2.8925855325564813e-06
+  },
+  {
+    "id": "738.3",
+    "edt": "1.7.16.2.3",
+    "nombre": "Frentes De Losa",
+    "cantidad": 2.0,
+    "unidad": "m2",
+    "ponderacion": 9.64195177518827e-07
+  },
+  {
+    "id": "738.4.1",
+    "edt": "1.7.16.2.4.1",
+    "nombre": "Instalación de Aislapol (incluye elementos según EETT)",
+    "cantidad": 1759.0,
+    "unidad": "m2",
+    "ponderacion": 0.0005936067610394657
+  },
+  {
+    "id": "738.4.2",
+    "edt": "1.7.16.2.4.2",
+    "nombre": "Revestimiento Acrílico según ETTT",
+    "cantidad": 1759.0,
+    "unidad": "m2",
+    "ponderacion": 0.00025440289758834245
+  },
+  {
+    "id": "739.1",
+    "edt": "1.7.16.3.1",
+    "nombre": "Muros Cortina",
+    "cantidad": 968.0,
+    "unidad": "m2",
+    "ponderacion": 0.0004666704659191123
+  },
+  {
+    "id": "739.2",
+    "edt": "1.7.16.3.2",
+    "nombre": "Mamparas Y Paredes Moviles",
+    "cantidad": 82.0,
+    "unidad": "c/u",
+    "ponderacion": 3.9532002278271905e-05
+  },
+  {
+    "id": "739.3",
+    "edt": "1.7.16.3.3",
+    "nombre": "Frentes De Losa",
+    "cantidad": 3.0,
+    "unidad": "m2",
+    "ponderacion": 1.4462927662782406e-06
+  },
+  {
+    "id": "739.4.1",
+    "edt": "1.7.16.3.4.1",
+    "nombre": "Instalación de Aislapol (incluye elementos según EETT)",
+    "cantidad": 2435.0,
+    "unidad": "m2",
+    "ponderacion": 0.0008217353400404204
+  },
+  {
+    "id": "739.4.2",
+    "edt": "1.7.16.3.4.2",
+    "nombre": "Revestimiento Acrílico según ETTT",
+    "cantidad": 2435.0,
+    "unidad": "m2",
+    "ponderacion": 0.00035217228858875157
+  },
+  {
+    "id": "740.1",
+    "edt": "1.7.16.4.1",
+    "nombre": "Muros Cortina",
+    "cantidad": 823.0,
+    "unidad": "m2",
+    "ponderacion": 0.00039676631554899736
+  },
+  {
+    "id": "740.2",
+    "edt": "1.7.16.4.2",
+    "nombre": "Frentes De Losa",
+    "cantidad": 2.0,
+    "unidad": "m2",
+    "ponderacion": 9.64195177518827e-07
+  },
+  {
+    "id": "740.3.1",
+    "edt": "1.7.16.4.3.1",
+    "nombre": "Instalación de Aislapol (incluye elementos según EETT)",
+    "cantidad": 2125.0,
+    "unidad": "m2",
+    "ponderacion": 0.0007171201632796277
+  },
+  {
+    "id": "740.3.2",
+    "edt": "1.7.16.4.3.2",
+    "nombre": "Revestimiento Acrílico según ETTT",
+    "cantidad": 2125.0,
+    "unidad": "m2",
+    "ponderacion": 0.00030733721283412617
+  },
+  {
+    "id": "740.4",
+    "edt": "1.7.16.4.4",
+    "nombre": "Fachadas Ventilada",
+    "cantidad": 1876.0,
+    "unidad": "m2",
+    "ponderacion": 0.0009044150765126599
+  },
+  {
+    "id": "741.1",
+    "edt": "1.7.16.5.1",
+    "nombre": "Muros Cortina",
+    "cantidad": 569.0,
+    "unidad": "m2",
+    "ponderacion": 0.0002743135280041063
+  },
+  {
+    "id": "741.2",
+    "edt": "1.7.16.5.2",
+    "nombre": "Frentes De Losa",
+    "cantidad": 1.0,
+    "unidad": "m2",
+    "ponderacion": 4.820975887594135e-07
+  },
+  {
+    "id": "741.3.1",
+    "edt": "1.7.16.5.3.1",
+    "nombre": "Instalación de Aislapol (incluye elementos según EETT)",
+    "cantidad": 1905.0,
+    "unidad": "m2",
+    "ponderacion": 0.0006428771346106779
+  },
+  {
+    "id": "741.3.2",
+    "edt": "1.7.16.5.3.2",
+    "nombre": "Revestimiento Acrílico según ETTT",
+    "cantidad": 1905.0,
+    "unidad": "m2",
+    "ponderacion": 0.0002755187719760048
+  },
+  {
+    "id": "741.4",
+    "edt": "1.7.16.5.4",
+    "nombre": "Fachadas Ventilada",
+    "cantidad": 1335.0,
+    "unidad": "m2",
+    "ponderacion": 0.000643600280993817
+  },
+  {
+    "id": "742.1",
+    "edt": "1.7.16.6.1",
+    "nombre": "Muros Cortina",
+    "cantidad": 596.0,
+    "unidad": "m2",
+    "ponderacion": 0.0002873301629006105
+  },
+  {
+    "id": "742.2",
+    "edt": "1.7.16.6.2",
+    "nombre": "Frentes De Losa",
+    "cantidad": 1.0,
+    "unidad": "m2",
+    "ponderacion": 4.820975887594136e-07
+  },
+  {
+    "id": "742.3.1",
+    "edt": "1.7.16.6.3.1",
+    "nombre": "Instalación de Aislapol (incluye elementos según EETT)",
+    "cantidad": 1920.0,
+    "unidad": "m2",
+    "ponderacion": 0.0006479391592926518
+  },
+  {
+    "id": "742.3.2",
+    "edt": "1.7.16.6.3.2",
+    "nombre": "Revestimiento Acrílico según ETTT",
+    "cantidad": 1920.0,
+    "unidad": "m2",
+    "ponderacion": 0.0002776882111254222
+  },
+  {
+    "id": "742.4",
+    "edt": "1.7.16.6.4",
+    "nombre": "Fachadas Ventilada",
+    "cantidad": 1370.0,
+    "unidad": "m2",
+    "ponderacion": 0.0006604736966003967
+  },
+  {
+    "id": "743.1",
+    "edt": "1.7.16.7.1",
+    "nombre": "Muros Cortina",
+    "cantidad": 528.0,
+    "unidad": "m2",
+    "ponderacion": 0.0002545475268649703
+  },
+  {
+    "id": "743.2",
+    "edt": "1.7.16.7.2",
+    "nombre": "Frentes De Losa",
+    "cantidad": 1.0,
+    "unidad": "m2",
+    "ponderacion": 4.820975887594135e-07
+  },
+  {
+    "id": "743.3.1",
+    "edt": "1.7.16.7.3.1",
+    "nombre": "Instalación de Aislapol (incluye elementos según EETT)",
+    "cantidad": 1918.0,
+    "unidad": "m2",
+    "ponderacion": 0.0006472642226683885
+  },
+  {
+    "id": "743.3.2",
+    "edt": "1.7.16.7.3.2",
+    "nombre": "Revestimiento Acrílico según ETTT",
+    "cantidad": 1918.0,
+    "unidad": "m2",
+    "ponderacion": 0.00027739895257216653
+  },
+  {
+    "id": "743.4",
+    "edt": "1.7.16.7.4",
+    "nombre": "Fachadas Ventilada",
+    "cantidad": 1377.0,
+    "unidad": "m2",
+    "ponderacion": 0.0006638483797217124
+  },
+  {
+    "id": "744.1",
+    "edt": "1.7.16.8.1",
+    "nombre": "Frentes De Losa",
+    "cantidad": 2.0,
+    "unidad": "m2",
+    "ponderacion": 9.64195177518827e-07
+  },
+  {
+    "id": "744.2",
+    "edt": "1.7.16.8.2",
+    "nombre": "Fachadas Ventilada",
+    "cantidad": 3157.0,
+    "unidad": "m2",
+    "ponderacion": 0.0015219820877134685
+  }
+]

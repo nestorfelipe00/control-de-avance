@@ -1,0 +1,374 @@
+<title>Avance ARQ Coquimbo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+  :root{
+    --ground:#eef1f5; --surface:#ffffff; --surface-2:#f6f8fb;
+    --ink:#0f172a; --ink-2:#475569; --ink-3:#8593a8; --border:#e2e8f0;
+    --accent:#2563eb;
+    --st-por:#94a3b8; --st-prog:#f59e0b; --st-ejec:#16a34a;
+    --shadow:0 1px 2px rgba(15,23,42,.06),0 4px 16px rgba(15,23,42,.05);
+    --w1:#dbeafe; --w2:#1e3a8a;
+  }
+  :root:not([data-theme="light"]){}
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0a0f1c; --surface:#111a2e; --surface-2:#0e1526;
+      --ink:#e9eef8; --ink-2:#a7b4cc; --ink-3:#697690; --border:#22304c;
+      --accent:#3b82f6;
+      --st-por:#64748b; --st-prog:#f59e0b; --st-ejec:#22c55e;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+      --w1:#1e293b; --w2:#93c5fd;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0a0f1c; --surface:#111a2e; --surface-2:#0e1526;
+    --ink:#e9eef8; --ink-2:#a7b4cc; --ink-3:#697690; --border:#22304c;
+    --accent:#3b82f6; --st-por:#64748b; --st-prog:#f59e0b; --st-ejec:#22c55e;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+    --w1:#1e293b; --w2:#93c5fd;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);
+    font-family:Inter,system-ui,Segoe UI,sans-serif;font-size:14px;line-height:1.45;
+    -webkit-font-smoothing:antialiased}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+  h1,h2,h3{font-family:"Barlow Semi Condensed",Inter,sans-serif;margin:0;letter-spacing:.01em}
+  .wrap{max-width:1400px;margin:0 auto;padding:18px 20px 40px}
+
+  /* Header */
+  header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    padding:14px 18px;background:linear-gradient(120deg,var(--accent),color-mix(in srgb,var(--accent) 55%,#0b3aa8));
+    border-radius:14px;color:#fff;box-shadow:var(--shadow)}
+  header .title h1{font-size:24px;font-weight:700;text-transform:uppercase;line-height:1.05}
+  header .title p{margin:2px 0 0;font-size:12.5px;opacity:.85;font-weight:500}
+  .badge{font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);padding:5px 10px;border-radius:999px}
+
+  /* KPI strip */
+  .kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:16px}
+  .kpi{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow)}
+  .kpi .lbl{font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3);font-weight:600}
+  .kpi .val{font-size:23px;font-weight:600;margin-top:4px;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+  .kpi .sub{font-size:11px;color:var(--ink-2);margin-top:1px}
+  .kpi.hl{background:linear-gradient(160deg,color-mix(in srgb,var(--st-ejec) 16%,var(--surface)),var(--surface))}
+
+  /* Filters */
+  .filters{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin-top:16px;
+    background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow)}
+  .field{display:flex;flex-direction:column;gap:5px}
+  .field label{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);font-weight:600}
+  select{font:inherit;padding:8px 10px;border-radius:9px;border:1px solid var(--border);
+    background:var(--surface-2);color:var(--ink);min-width:150px;cursor:pointer}
+  select:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+  .reset{margin-left:auto;align-self:center;font:inherit;font-weight:600;cursor:pointer;
+    background:var(--surface-2);color:var(--ink-2);border:1px solid var(--border);padding:9px 14px;border-radius:9px}
+  .reset:hover{color:var(--accent);border-color:var(--accent)}
+
+  /* Main grid */
+  .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-top:16px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+  .card h2{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);margin-bottom:12px}
+  .card h2 small{font-weight:500;text-transform:none;letter-spacing:0;color:var(--ink-3);font-family:Inter}
+
+  /* Viewer schematic */
+  .viewer{display:flex;flex-direction:column}
+  .viewer .stage{flex:1;display:flex;align-items:center;justify-content:center;min-height:360px;
+    background:radial-gradient(120% 120% at 50% 0%,var(--surface-2),var(--surface));
+    border-radius:10px;border:1px dashed var(--border);position:relative;overflow:hidden}
+  .viewer .note{position:absolute;bottom:8px;left:0;right:0;text-align:center;font-size:11px;color:var(--ink-3)}
+  .lvl{cursor:pointer;transition:opacity .15s}
+  .lvl:hover{opacity:.85}
+  .lvl.dim{opacity:.28}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:12px}
+  .legend span{display:inline-flex;align-items:center;gap:6px;color:var(--ink-2)}
+  .dot{width:11px;height:11px;border-radius:3px;display:inline-block}
+
+  .rightcol{display:flex;flex-direction:column;gap:16px}
+  .donut-wrap{display:flex;gap:16px;align-items:center}
+  .donut-legend{display:flex;flex-direction:column;gap:3px;max-height:190px;overflow:auto;font-size:11.5px;flex:1}
+  .donut-legend .row{display:flex;align-items:center;gap:7px;color:var(--ink-2)}
+  .donut-legend .row b{margin-left:auto;color:var(--ink);font-family:"IBM Plex Mono",monospace}
+
+  /* Table */
+  .tablecard{margin-top:16px}
+  .tbl-scroll{overflow:auto;max-height:440px;border-radius:10px;border:1px solid var(--border)}
+  table{border-collapse:collapse;width:100%;font-size:13px}
+  thead th{position:sticky;top:0;background:var(--surface-2);text-align:left;padding:10px 12px;
+    font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3);font-weight:600;border-bottom:1px solid var(--border);cursor:pointer;white-space:nowrap}
+  tbody td{padding:9px 12px;border-bottom:1px solid var(--border)}
+  tbody tr:hover{background:var(--surface-2)}
+  td.num{text-align:right;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+  .pill{font-size:10.5px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;display:inline-flex;align-items:center;gap:5px}
+  .pill .dot{width:8px;height:8px}
+  .bar{height:7px;border-radius:4px;background:var(--border);overflow:hidden;min-width:70px}
+  .bar>i{display:block;height:100%;border-radius:4px;background:var(--st-ejec)}
+  .barcell{display:flex;align-items:center;gap:8px}
+  .barcell .pct{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-2);min-width:42px;text-align:right}
+
+  .foot{margin-top:22px;font-size:11.5px;color:var(--ink-3);text-align:center;line-height:1.6}
+  .tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--surface);
+    padding:6px 9px;border-radius:7px;font-size:11.5px;opacity:0;transition:opacity .1s;z-index:9;box-shadow:var(--shadow);font-family:"IBM Plex Mono",monospace}
+  @media (max-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="title">
+      <h1>Avance de Obra en Modelo BIM</h1>
+      <p>Hospital de Coquimbo · Terminaciones ARQ · Control semanal por partidas</p>
+    </div>
+    <div class="badge">Prototipo · datos de avance demo</div>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="filters">
+    <div class="field"><label for="f-est">Estatus</label>
+      <select id="f-est"><option value="todos">Todos</option>
+        <option value="ejecutado">Ejecutado</option>
+        <option value="en_progreso">En Progreso</option>
+        <option value="por_ejecutar">Por Ejecutar</option></select></div>
+    <div class="field"><label for="f-sem">Semana de Ejecución</label>
+      <select id="f-sem"></select></div>
+    <div class="field"><label for="f-niv">Nivel</label>
+      <select id="f-niv"></select></div>
+    <button class="reset" id="reset">↺ Limpiar filtros</button>
+  </div>
+
+  <div class="grid">
+    <div class="card viewer">
+      <h2>Modelo 3D · <small>por nivel (color = % ejecutado)</small></h2>
+      <div class="stage" id="stage"></div>
+      <div class="legend">
+        <span><i class="dot" style="background:var(--st-ejec)"></i>Ejecutado</span>
+        <span><i class="dot" style="background:var(--st-prog)"></i>En Progreso</span>
+        <span><i class="dot" style="background:var(--st-por)"></i>Por Ejecutar</span>
+        <span style="color:var(--ink-3)">· clic en un nivel para filtrar</span>
+      </div>
+    </div>
+
+    <div class="rightcol">
+      <div class="card">
+        <h2>Superficie (m²) por Semana</h2>
+        <div class="donut-wrap">
+          <div id="donut"></div>
+          <div class="donut-legend" id="donut-legend"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Avance ejecutado (m²) por Semana</h2>
+        <div id="bars"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card tablecard">
+    <h2>Partidas ARQ cuantificables en BIM <small id="tbl-count"></small></h2>
+    <div class="tbl-scroll">
+      <table id="tbl">
+        <thead><tr>
+          <th data-k="p">Partida</th>
+          <th data-k="u">Unidad</th>
+          <th data-k="c" class="num">Cantidad</th>
+          <th data-k="a">% Ejecutado</th>
+          <th data-k="e">Estado</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="foot">
+    <b>Fuente de partidas:</b> «REVISION DE PONDERADORES BIM.xlsx» → hoja «Detalle control bim» · especialidad ARQ · cuantificable en BIM = «sí» (286 partidas).<br>
+    Los porcentajes de avance, semanas y niveles son <b>datos DEMO</b> generados para la maqueta. Se reemplazarán por datos reales de Supabase, y el panel 3D por el Speckle Viewer en vivo (modelo 1a3ef97d52/51f6f1a7ce).
+  </div>
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+const DATA = [{"p":"Impermeabilizaciones","c":41428.6,"u":"m2","n":"Nivel -1","s":9,"e":"ejecutado","a":100},{"p":"Impermeabilizaciones","c":18141.8,"u":"m2","n":"Nivel 3","s":12,"e":"ejecutado","a":100},{"p":"Impermeabilizaciones","c":2580.8,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Impermeabilizaciones","c":1603.9,"u":"m2","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Impermeabilizaciones","c":1368.5,"u":"m2","n":"Nivel -1","s":5,"e":"ejecutado","a":100},{"p":"Impermeabilizaciones","c":1061.9,"u":"m2","n":"Nivel -1","s":16,"e":"ejecutado","a":100},{"p":"Impermeabilizaciones","c":846.6,"u":"m2","n":"Nivel 3","s":13,"e":"ejecutado","a":100},{"p":"Impermeabilizaciones","c":832.7,"u":"m2","n":"Nivel -1","s":3,"e":"ejecutado","a":100},{"p":"Sobrelosas","c":439.0,"u":"m2","n":"Nivel 3","s":14,"e":"en_progreso","a":31},{"p":"Pisos Industriales y Decorativos (greiting y hormigón pulido)","c":355.0,"u":"m2","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Baldosas Microvibrada (incluye guardapolvos)","c":36.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Pavimento de Porcelanato","c":84.0,"u":"m2","n":"Nivel -1","s":14,"e":"en_progreso","a":57},{"p":"Sobrelosas","c":16997.0,"u":"m2","n":"Nivel 1","s":8,"e":"ejecutado","a":100},{"p":"Pisos Industriales y Decorativos (greiting y hormigón pulido)","c":3039.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Baldosas Microvibrada (incluye guardapolvos)","c":6561.0,"u":"m2","n":"Nivel 5","s":null,"e":"por_ejecutar","a":0},{"p":"Pavimento de Porcelanato","c":3082.0,"u":"m2","n":"Nivel 4","s":13,"e":"ejecutado","a":100},{"p":"Pavimentos Vinílicos","c":2819.0,"u":"m2","n":"Nivel 3","s":11,"e":"ejecutado","a":100},{"p":"Pisos de Caucho","c":8057.0,"u":"m2","n":"Nivel -1","s":3,"e":"en_progreso","a":57},{"p":"Piso de Madera Auditorio","c":388.0,"u":"m2","n":"Nivel 3","s":15,"e":"ejecutado","a":100},{"p":"Sobrelosas","c":17294.0,"u":"m2","n":"Nivel 5","s":15,"e":"ejecutado","a":100},{"p":"Pisos Industriales y Decorativos (greiting y hormigón pulido)","c":411.0,"u":"m2","n":"Nivel -1","s":9,"e":"ejecutado","a":100},{"p":"Baldosas Microvibrada (incluye guardapolvos)","c":806.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Pavimento de Porcelanato","c":2284.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Pavimentos Vinílicos","c":1328.0,"u":"m2","n":"Nivel 3","s":4,"e":"ejecutado","a":100},{"p":"Pisos de Caucho","c":13271.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Sobrelosas","c":13908.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Pisos Industriales y Decorativos (greiting y hormigón pulido)","c":990.0,"u":"m2","n":"Nivel 1","s":3,"e":"ejecutado","a":100},{"p":"Baldosas Microvibrada (incluye guardapolvos)","c":893.0,"u":"m2","n":"Nivel 2","s":11,"e":"ejecutado","a":100},{"p":"Pavimento de Porcelanato","c":1720.0,"u":"m2","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Pavimentos Vinílicos","c":3062.0,"u":"m2","n":"Nivel 3","s":15,"e":"ejecutado","a":100},{"p":"Pisos de Caucho","c":8136.0,"u":"m2","n":"Nivel 1","s":15,"e":"ejecutado","a":100},{"p":"Sobrelosas","c":4009.0,"u":"m2","n":"Nivel -1","s":7,"e":"ejecutado","a":100},{"p":"Pisos Industriales y Decorativos (greiting y hormigón pulido)","c":444.0,"u":"m2","n":"Nivel 4","s":9,"e":"ejecutado","a":100},{"p":"Baldosas Microvibrada (incluye guardapolvos)","c":5942.0,"u":"m2","n":"Nivel 1","s":16,"e":"ejecutado","a":100},{"p":"Pavimento de Porcelanato","c":1475.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Pavimentos Vinílicos","c":195.0,"u":"m2","n":"Nivel 4","s":10,"e":"ejecutado","a":100},{"p":"Pisos de Caucho","c":1895.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Piso Técnico Registrable","c":133.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Sobrelosas","c":7606.0,"u":"m2","n":"Nivel 3","s":6,"e":"ejecutado","a":100},{"p":"Pisos Industriales y Decorativos (greiting y hormigón pulido)","c":570.0,"u":"m2","n":"Nivel -1","s":5,"e":"en_progreso","a":22},{"p":"Baldosas Microvibrada (incluye guardapolvos)","c":1300.0,"u":"m2","n":"Nivel 5","s":13,"e":"en_progreso","a":29},{"p":"Pavimento de Porcelanato","c":1133.0,"u":"m2","n":"Nivel 4","s":7,"e":"ejecutado","a":100},{"p":"Pavimentos Vinílicos","c":848.0,"u":"m2","n":"Nivel 3","s":1,"e":"ejecutado","a":100},{"p":"Pisos de Caucho","c":5055.0,"u":"m2","n":"Nivel 1","s":8,"e":"ejecutado","a":100},{"p":"Sobrelosas","c":7405.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Pisos Industriales y Decorativos (greiting y hormigón pulido)","c":586.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Baldosas Microvibrada (incluye guardapolvos)","c":1278.0,"u":"m2","n":"Nivel 2","s":16,"e":"ejecutado","a":100},{"p":"Pavimento de Porcelanato","c":1112.0,"u":"m2","n":"Nivel 3","s":9,"e":"ejecutado","a":100},{"p":"Pavimentos Vinílicos","c":850.0,"u":"m2","n":"Nivel 1","s":1,"e":"ejecutado","a":100},{"p":"Pisos de Caucho","c":4857.0,"u":"m2","n":"Nivel 5","s":14,"e":"ejecutado","a":100},{"p":"Sobrelosas","c":7421.0,"u":"m2","n":"Nivel 4","s":null,"e":"por_ejecutar","a":0},{"p":"Pisos Industriales y Decorativos (greiting y hormigón pulido)","c":584.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Baldosas Microvibrada (incluye guardapolvos)","c":1234.0,"u":"m2","n":"Nivel -1","s":11,"e":"ejecutado","a":100},{"p":"Pavimento de Porcelanato","c":1134.0,"u":"m2","n":"Nivel 4","s":3,"e":"en_progreso","a":82},{"p":"Pavimentos Vinílicos","c":837.0,"u":"m2","n":"Nivel 5","s":14,"e":"en_progreso","a":63},{"p":"Pisos de Caucho","c":4866.0,"u":"m2","n":"Nivel 3","s":16,"e":"ejecutado","a":100},{"p":"Sobrelosas","c":203.0,"u":"m2","n":"Nivel -1","s":4,"e":"ejecutado","a":100},{"p":"Pisos Industriales y Decorativos (greiting y hormigón pulido)","c":203.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Baldosas Microvibrada (incluye guardapolvos)","c":3.0,"u":"m2","n":"Nivel -1","s":16,"e":"en_progreso","a":53},{"p":"Estructuración de Tabique","c":1125.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)","c":1125.0,"u":"m2","n":"Nivel 2","s":10,"e":"ejecutado","a":100},{"p":"Montaje de Aislación de tabique","c":1125.0,"u":"m2","n":"Nivel 5","s":3,"e":"ejecutado","a":100},{"p":"Instalación de Segunda Cara","c":1125.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Estructuración de Tabique","c":36489.0,"u":"m2","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)","c":36489.0,"u":"m2","n":"Nivel 5","s":13,"e":"ejecutado","a":100},{"p":"Montaje de Aislación de tabique","c":36489.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Segunda Cara","c":36489.0,"u":"m2","n":"Nivel 2","s":14,"e":"ejecutado","a":100},{"p":"Estructuración de Tabique","c":33873.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)","c":33873.0,"u":"m2","n":"Nivel 4","s":8,"e":"ejecutado","a":100},{"p":"Montaje de Aislación de tabique","c":33873.0,"u":"m2","n":"Nivel 5","s":8,"e":"ejecutado","a":100},{"p":"Instalación de Segunda Cara","c":33873.0,"u":"m2","n":"Nivel 4","s":6,"e":"ejecutado","a":100},{"p":"Estructuración de Tabique","c":26340.0,"u":"m2","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)","c":26340.0,"u":"m2","n":"Nivel 5","s":16,"e":"ejecutado","a":100},{"p":"Montaje de Aislación de tabique","c":26340.0,"u":"m2","n":"Nivel 3","s":11,"e":"ejecutado","a":100},{"p":"Instalación de Segunda Cara","c":26340.0,"u":"m2","n":"Nivel 3","s":2,"e":"ejecutado","a":100},{"p":"Estructuración de Tabique","c":18938.0,"u":"m2","n":"Nivel -1","s":8,"e":"ejecutado","a":100},{"p":"Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)","c":18938.0,"u":"m2","n":"Nivel 5","s":7,"e":"ejecutado","a":100},{"p":"Montaje de Aislación de tabique","c":18938.0,"u":"m2","n":"Nivel 1","s":11,"e":"ejecutado","a":100},{"p":"Instalación de Segunda Cara","c":18938.0,"u":"m2","n":"Nivel 5","s":null,"e":"por_ejecutar","a":0},{"p":"Estructuración de Tabique","c":14334.0,"u":"m2","n":"Nivel 2","s":2,"e":"ejecutado","a":100},{"p":"Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)","c":14334.0,"u":"m2","n":"Nivel -1","s":10,"e":"en_progreso","a":78},{"p":"Montaje de Aislación de tabique","c":14334.0,"u":"m2","n":"Nivel 4","s":1,"e":"ejecutado","a":100},{"p":"Instalación de Segunda Cara","c":14334.0,"u":"m2","n":"Nivel 4","s":null,"e":"por_ejecutar","a":0},{"p":"Estructuración de Tabique","c":13969.0,"u":"m2","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)","c":13969.0,"u":"m2","n":"Nivel 5","s":null,"e":"por_ejecutar","a":0},{"p":"Montaje de Aislación de tabique","c":13969.0,"u":"m2","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Segunda Cara","c":13969.0,"u":"m2","n":"Nivel -1","s":12,"e":"ejecutado","a":100},{"p":"Estructuración de Tabique","c":14299.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)","c":14299.0,"u":"m2","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Montaje de Aislación de tabique","c":14299.0,"u":"m2","n":"Nivel 3","s":4,"e":"en_progreso","a":84},{"p":"Instalación de Segunda Cara","c":14299.0,"u":"m2","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Estructuración de Tabique","c":4056.0,"u":"m2","n":"Nivel 1","s":12,"e":"ejecutado","a":100},{"p":"Instalación de Primera Cara (se incluyen cantidad de planchas si aplica)","c":4056.0,"u":"m2","n":"Nivel 4","s":null,"e":"por_ejecutar","a":0},{"p":"Montaje de Aislación de tabique","c":4056.0,"u":"m2","n":"Nivel 5","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Segunda Cara","c":4056.0,"u":"m2","n":"Nivel 4","s":12,"e":"ejecutado","a":100},{"p":"Cielos Registrables (metálicos, de aluminio, HPL color madera)","c":58.0,"u":"m2","n":"Nivel -1","s":14,"e":"en_progreso","a":57},{"p":"Cielos Registrables (metálicos, de aluminio, HPL color madera)","c":8305.0,"u":"m2","n":"Nivel 1","s":1,"e":"ejecutado","a":100},{"p":"Estructuración de Cielo","c":10962.0,"u":"m2","n":"Nivel -1","s":7,"e":"ejecutado","a":100},{"p":"Aislación de Cielo","c":10962.0,"u":"m2","n":"Nivel -1","s":8,"e":"en_progreso","a":66},{"p":"Tapado de Cielo","c":10962.0,"u":"m2","n":"Nivel 3","s":2,"e":"en_progreso","a":69},{"p":"Cielos Registrables (metálicos, de aluminio, HPL color madera)","c":7313.0,"u":"m2","n":"Nivel 3","s":5,"e":"en_progreso","a":46},{"p":"Estructuración de Cielo","c":9427.0,"u":"m2","n":"Nivel 3","s":9,"e":"ejecutado","a":100},{"p":"Aislación de Cielo","c":9427.0,"u":"m2","n":"Nivel 5","s":2,"e":"ejecutado","a":100},{"p":"Tapado de Cielo","c":9427.0,"u":"m2","n":"Nivel 1","s":16,"e":"ejecutado","a":100},{"p":"Cielos Registrables (metálicos, de aluminio, HPL color madera)","c":4297.0,"u":"m2","n":"Nivel 4","s":null,"e":"por_ejecutar","a":0},{"p":"Estructuración de Cielo","c":8730.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Aislación de Cielo","c":8730.0,"u":"m2","n":"Nivel 1","s":15,"e":"ejecutado","a":100},{"p":"Tapado de Cielo","c":8730.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Cielos Registrables (metálicos, de aluminio, HPL color madera)","c":5847.0,"u":"m2","n":"Nivel 2","s":4,"e":"en_progreso","a":23},{"p":"Estructuración de Cielo","c":3041.0,"u":"m2","n":"Nivel 1","s":1,"e":"ejecutado","a":100},{"p":"Aislación de Cielo","c":3041.0,"u":"m2","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Tapado de Cielo","c":3041.0,"u":"m2","n":"Nivel 5","s":null,"e":"por_ejecutar","a":0},{"p":"Cielos Registrables (metálicos, de aluminio, HPL color madera)","c":3759.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Estructuración de Cielo","c":3950.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Aislación de Cielo","c":3950.0,"u":"m2","n":"Nivel 2","s":6,"e":"ejecutado","a":100},{"p":"Tapado de Cielo","c":3950.0,"u":"m2","n":"Nivel 4","s":16,"e":"en_progreso","a":77},{"p":"Cielos Registrables (metálicos, de aluminio, HPL color madera)","c":3600.0,"u":"m2","n":"Nivel 2","s":7,"e":"ejecutado","a":100},{"p":"Estructuración de Cielo","c":3889.0,"u":"m2","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Aislación de Cielo","c":3889.0,"u":"m2","n":"Nivel 2","s":7,"e":"en_progreso","a":59},{"p":"Tapado de Cielo","c":3889.0,"u":"m2","n":"Nivel 4","s":7,"e":"ejecutado","a":100},{"p":"Cielos Registrables (metálicos, de aluminio, HPL color madera)","c":3604.0,"u":"m2","n":"Nivel 1","s":12,"e":"ejecutado","a":100},{"p":"Estructuración de Cielo","c":3875.0,"u":"m2","n":"Nivel -1","s":6,"e":"ejecutado","a":100},{"p":"Aislación de Cielo","c":3875.0,"u":"m2","n":"Nivel 1","s":1,"e":"ejecutado","a":100},{"p":"Tapado de Cielo","c":3875.0,"u":"m2","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Decorativos y Seguridad (rev. Acolchado, metálicos, madera)","c":65.0,"u":"m2","n":"Nivel 2","s":14,"e":"en_progreso","a":83},{"p":"Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos","c":65.7,"u":"m2","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"De Piezas Rigidas En Paramentos Verticales (cerámicas y porcelanatos)","c":6628.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos","c":65.7,"u":"m2","n":"Nivel 2","s":3,"e":"ejecutado","a":100},{"p":"Decorativos y Seguridad (rev. Acolchado, metálicos, madera)","c":1519.0,"u":"m2","n":"Nivel 2","s":4,"e":"ejecutado","a":100},{"p":"Placas Laminadas de Alta Presión (HPL)","c":2302.0,"u":"m2","n":"Nivel 3","s":12,"e":"en_progreso","a":16},{"p":"De Piezas Rigidas En Paramentos Verticales (cerámicas y porcelanatos)","c":4006.0,"u":"m2","n":"Nivel 5","s":null,"e":"por_ejecutar","a":0},{"p":"Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos","c":65.7,"u":"m2","n":"Nivel 3","s":9,"e":"ejecutado","a":100},{"p":"Decorativos y Seguridad (rev. Acolchado, metálicos, madera)","c":1442.0,"u":"m2","n":"Nivel 3","s":11,"e":"ejecutado","a":100},{"p":"Placas Laminadas de Alta Presión (HPL)","c":3272.0,"u":"m2","n":"Nivel 2","s":3,"e":"en_progreso","a":18},{"p":"De Piezas Rigidas En Paramentos Verticales (cerámicas y porcelanatos)","c":3031.0,"u":"m2","n":"Nivel 4","s":12,"e":"ejecutado","a":100},{"p":"Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos","c":4.5,"u":"m2","n":"Nivel 1","s":3,"e":"ejecutado","a":100},{"p":"Decorativos y Seguridad (rev. Acolchado, metálicos, madera)","c":904.0,"u":"m2","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Placas Laminadas de Alta Presión (HPL)","c":2989.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"De Piezas Rigidas En Paramentos Verticales (cerámicas y porcelanatos)","c":2291.0,"u":"m2","n":"Nivel 1","s":13,"e":"ejecutado","a":100},{"p":"Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos","c":4.5,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Decorativos y Seguridad (rev. Acolchado, metálicos, madera)","c":851.0,"u":"m2","n":"Nivel -1","s":1,"e":"ejecutado","a":100},{"p":"Placas Laminadas de Alta Presión (HPL)","c":1112.0,"u":"m2","n":"Nivel 5","s":12,"e":"ejecutado","a":100},{"p":"De Piezas Rigidas En Paramentos Verticales (cerámicas y porcelanatos)","c":3451.0,"u":"m2","n":"Nivel 5","s":null,"e":"por_ejecutar","a":0},{"p":"Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos","c":4.5,"u":"m2","n":"Nivel 4","s":10,"e":"ejecutado","a":100},{"p":"Decorativos y Seguridad (rev. Acolchado, metálicos, madera)","c":494.0,"u":"m2","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Placas Laminadas de Alta Presión (HPL)","c":2655.0,"u":"m2","n":"Nivel 5","s":null,"e":"por_ejecutar","a":0},{"p":"De Piezas Rigidas En Paramentos Verticales (cerámicas y porcelanatos)","c":3645.0,"u":"m2","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos","c":4.5,"u":"m2","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Decorativos y Seguridad (rev. Acolchado, metálicos, madera)","c":526.0,"u":"m2","n":"Nivel 4","s":9,"e":"ejecutado","a":100},{"p":"Placas Laminadas de Alta Presión (HPL)","c":2614.0,"u":"m2","n":"Nivel -1","s":10,"e":"en_progreso","a":56},{"p":"De Piezas Rigidas En Paramentos Verticales (cerámicas y porcelanatos)","c":3613.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Rev. Escaleras, Morteros Industriales Para Revoque Y Enlucidos","c":4.5,"u":"m2","n":"Nivel 2","s":8,"e":"en_progreso","a":48},{"p":"Decorativos y Seguridad (rev. Acolchado, metálicos, madera)","c":549.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Placas Laminadas de Alta Presión (HPL)","c":2576.0,"u":"m2","n":"Nivel 5","s":15,"e":"ejecutado","a":100},{"p":"Ventanas Especiales con Montantes","c":6.0,"u":"c/u","n":"Nivel 4","s":2,"e":"ejecutado","a":100},{"p":"Ventanas de Aluminio","c":455.0,"u":"c/u","n":"Nivel 5","s":6,"e":"ejecutado","a":100},{"p":"Ventanas Especiales con Montantes","c":58.0,"u":"c/u","n":"Nivel 2","s":2,"e":"en_progreso","a":79},{"p":"Ventana Termopanel Micropersiana","c":2.0,"u":"c/u","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Ventanas de Aluminio","c":480.0,"u":"c/u","n":"Nivel 5","s":3,"e":"ejecutado","a":100},{"p":"Ventanas Especiales con Montantes","c":51.0,"u":"c/u","n":"Nivel -1","s":9,"e":"ejecutado","a":100},{"p":"Ventana Interior de Seguridad","c":6.0,"u":"c/u","n":"Nivel -1","s":7,"e":"ejecutado","a":100},{"p":"Ventanas de Aluminio","c":342.0,"u":"c/u","n":"Nivel 4","s":16,"e":"ejecutado","a":100},{"p":"Ventanas Especiales con Montantes","c":13.0,"u":"c/u","n":"Nivel 4","s":13,"e":"ejecutado","a":100},{"p":"Ventana Interior de Seguridad","c":1.0,"u":"c/u","n":"Nivel -1","s":2,"e":"ejecutado","a":100},{"p":"Ventana Termopanel Micropersiana","c":57.0,"u":"c/u","n":"Nivel 1","s":8,"e":"ejecutado","a":100},{"p":"Ventanas de Aluminio","c":292.0,"u":"c/u","n":"Nivel 2","s":8,"e":"en_progreso","a":18},{"p":"Ventanas Especiales con Montantes","c":78.0,"u":"c/u","n":"Nivel 4","s":2,"e":"ejecutado","a":100},{"p":"Ventanas de Aluminio","c":272.0,"u":"c/u","n":"Nivel 5","s":null,"e":"por_ejecutar","a":0},{"p":"Ventanas de Aluminio","c":264.0,"u":"c/u","n":"Nivel -1","s":9,"e":"en_progreso","a":60},{"p":"Ventana Termopanel Micropersiana","c":2.0,"u":"c/u","n":"Nivel 5","s":null,"e":"por_ejecutar","a":0},{"p":"Ventanas de Aluminio","c":276.0,"u":"c/u","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas Cortafuegos","c":11.0,"u":"c/u","n":"Nivel -1","s":7,"e":"ejecutado","a":100},{"p":"Puertas de Madera","c":6.0,"u":"c/u","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas Vidriadas, automáticas, de acero y de aluminio","c":2.0,"u":"c/u","n":"Nivel 5","s":8,"e":"ejecutado","a":100},{"p":"Puertas de Registro de Instalaciones","c":2.0,"u":"c/u","n":"Nivel 2","s":13,"e":"ejecutado","a":100},{"p":"Puertas Exteriores","c":62.0,"u":"c/u","n":"Nivel 4","s":13,"e":"en_progreso","a":75},{"p":"Puertas Cortafuegos","c":48.0,"u":"c/u","n":"Nivel 5","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas de Garaje","c":1.0,"u":"c/u","n":"Nivel 4","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas de Uso Industrial","c":8.0,"u":"c/u","n":"Nivel 5","s":14,"e":"en_progreso","a":71},{"p":"Puertas HPL","c":157.0,"u":"c/u","n":"Nivel 3","s":5,"e":"en_progreso","a":16},{"p":"Puertas de Madera","c":718.0,"u":"c/u","n":"Nivel 2","s":4,"e":"ejecutado","a":100},{"p":"Puertas Vidriadas, automáticas, de acero y de aluminio","c":6.0,"u":"c/u","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas de Registro de Instalaciones","c":57.0,"u":"c/u","n":"Nivel 4","s":1,"e":"ejecutado","a":100},{"p":"Puertas Exteriores","c":20.0,"u":"c/u","n":"Nivel 2","s":10,"e":"en_progreso","a":34},{"p":"Puertas Cortafuegos","c":44.0,"u":"c/u","n":"Nivel 2","s":13,"e":"en_progreso","a":24},{"p":"Puertas HPL","c":58.0,"u":"c/u","n":"Nivel 2","s":14,"e":"ejecutado","a":100},{"p":"Puertas de Madera","c":794.0,"u":"c/u","n":"Nivel 4","s":3,"e":"ejecutado","a":100},{"p":"Puertas Vidriadas, automáticas, de acero y de aluminio","c":15.0,"u":"c/u","n":"Nivel 2","s":5,"e":"ejecutado","a":100},{"p":"Puertas de Registro de Instalaciones","c":54.0,"u":"c/u","n":"Nivel 2","s":8,"e":"ejecutado","a":100},{"p":"Puertas Exteriores","c":17.0,"u":"c/u","n":"Nivel 5","s":9,"e":"ejecutado","a":100},{"p":"Puertas Cortafuegos","c":34.0,"u":"c/u","n":"Nivel 4","s":3,"e":"ejecutado","a":100},{"p":"Puertas HPL","c":76.0,"u":"c/u","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas de Madera","c":408.0,"u":"c/u","n":"Nivel 2","s":1,"e":"ejecutado","a":100},{"p":"Puertas Vidriadas, automáticas, de acero y de aluminio","c":92.0,"u":"c/u","n":"Nivel 3","s":13,"e":"ejecutado","a":100},{"p":"Puertas de Registro de Instalaciones","c":39.0,"u":"c/u","n":"Nivel 3","s":11,"e":"ejecutado","a":100},{"p":"Puertas Exteriores","c":10.0,"u":"c/u","n":"Nivel 2","s":12,"e":"en_progreso","a":77},{"p":"Puertas Cortafuegos","c":23.0,"u":"c/u","n":"Nivel 2","s":9,"e":"ejecutado","a":100},{"p":"Puertas de Uso Industrial","c":1.0,"u":"c/u","n":"Nivel 1","s":8,"e":"ejecutado","a":100},{"p":"Puertas HPL","c":30.0,"u":"c/u","n":"Nivel 3","s":8,"e":"en_progreso","a":49},{"p":"Puertas de Madera","c":378.0,"u":"c/u","n":"Nivel 4","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas Vidriadas, automáticas, de acero y de aluminio","c":1.0,"u":"c/u","n":"Nivel -1","s":5,"e":"en_progreso","a":49},{"p":"Puertas de Registro de Instalaciones","c":40.0,"u":"c/u","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas Exteriores","c":12.0,"u":"c/u","n":"Nivel 3","s":1,"e":"en_progreso","a":59},{"p":"Puertas Cortafuegos","c":16.0,"u":"c/u","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas de Madera","c":345.0,"u":"c/u","n":"Nivel 5","s":8,"e":"ejecutado","a":100},{"p":"Puertas de Registro de Instalaciones","c":33.0,"u":"c/u","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas Exteriores","c":7.0,"u":"c/u","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas Cortafuegos","c":17.0,"u":"c/u","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas de Madera","c":339.0,"u":"c/u","n":"Nivel -1","s":13,"e":"ejecutado","a":100},{"p":"Puertas Vidriadas, automáticas, de acero y de aluminio","c":1.0,"u":"c/u","n":"Nivel 3","s":10,"e":"ejecutado","a":100},{"p":"Puertas de Registro de Instalaciones","c":33.0,"u":"c/u","n":"Nivel 2","s":11,"e":"en_progreso","a":28},{"p":"Puertas Exteriores","c":6.0,"u":"c/u","n":"Nivel 2","s":12,"e":"ejecutado","a":100},{"p":"Puertas Cortafuegos","c":17.0,"u":"c/u","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas de Madera","c":347.0,"u":"c/u","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas de Registro de Instalaciones","c":35.0,"u":"c/u","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas Exteriores","c":3.0,"u":"c/u","n":"Nivel -1","s":6,"e":"ejecutado","a":100},{"p":"Puertas Cortafuegos","c":3.0,"u":"c/u","n":"Nivel 3","s":4,"e":"ejecutado","a":100},{"p":"Puertas de Madera","c":1.0,"u":"c/u","n":"Nivel 1","s":3,"e":"ejecutado","a":100},{"p":"Puertas Vidriadas, automáticas, de acero y de aluminio","c":17.0,"u":"c/u","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Puertas de Registro de Instalaciones","c":9.0,"u":"c/u","n":"Nivel 5","s":2,"e":"ejecutado","a":100},{"p":"Componentes de Cubiertas Inclinadas (de plancha policarbonato, de Zinc)","c":1.0,"u":"m2","n":"Nivel -1","s":8,"e":"en_progreso","a":40},{"p":"Impermeabilización","c":3392.0,"u":"m2","n":"Nivel 3","s":6,"e":"ejecutado","a":100},{"p":"Instalación de Aislapol","c":3392.0,"u":"m2","n":"Nivel -1","s":8,"e":"ejecutado","a":100},{"p":"Sobrelosa","c":3392.0,"u":"m2","n":"Nivel 3","s":11,"e":"en_progreso","a":52},{"p":"Impermeabilización + mortero de Protección","c":3392.0,"u":"m2","n":"Nivel 3","s":5,"e":"ejecutado","a":100},{"p":"Impermeabilización","c":8374.0,"u":"m2","n":"Nivel 1","s":11,"e":"ejecutado","a":100},{"p":"Instalación de Aislapol","c":8374.0,"u":"m2","n":"Nivel 4","s":6,"e":"en_progreso","a":69},{"p":"Sobrelosa","c":8374.0,"u":"m2","n":"Nivel 2","s":16,"e":"ejecutado","a":100},{"p":"Impermeabilización + mortero de Protección","c":8374.0,"u":"m2","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Impermeabilización","c":3533.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Aislapol","c":3533.0,"u":"m2","n":"Nivel 5","s":8,"e":"en_progreso","a":37},{"p":"Sobrelosa","c":3533.0,"u":"m2","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Impermeabilización + mortero de Protección","c":3533.0,"u":"m2","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Impermeabilización","c":6758.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Aislapol","c":6758.0,"u":"m2","n":"Nivel 5","s":4,"e":"en_progreso","a":74},{"p":"Sobrelosa","c":6758.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Impermeabilización + mortero de Protección","c":6758.0,"u":"m2","n":"Nivel -1","s":13,"e":"ejecutado","a":100},{"p":"Impermeabilización","c":3206.0,"u":"m2","n":"Nivel 2","s":15,"e":"en_progreso","a":44},{"p":"Instalación de Aislapol","c":3206.0,"u":"m2","n":"Nivel 1","s":1,"e":"ejecutado","a":100},{"p":"Sobrelosa","c":3206.0,"u":"m2","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Impermeabilización + mortero de Protección","c":3206.0,"u":"m2","n":"Nivel 3","s":8,"e":"ejecutado","a":100},{"p":"Impermeabilización","c":228.0,"u":"m2","n":"Nivel 4","s":14,"e":"ejecutado","a":100},{"p":"Instalación de Aislapol","c":228.0,"u":"m2","n":"Nivel 1","s":12,"e":"ejecutado","a":100},{"p":"Sobrelosa","c":228.0,"u":"m2","n":"Nivel 3","s":12,"e":"en_progreso","a":61},{"p":"Impermeabilización + mortero de Protección","c":228.0,"u":"m2","n":"Nivel -1","s":14,"e":"ejecutado","a":100},{"p":"Impermeabilización","c":8689.0,"u":"m2","n":"Nivel 5","s":14,"e":"ejecutado","a":100},{"p":"Instalación de Aislapol","c":8689.0,"u":"m2","n":"Nivel 4","s":10,"e":"en_progreso","a":15},{"p":"Sobrelosa","c":8689.0,"u":"m2","n":"Nivel 5","s":3,"e":"ejecutado","a":100},{"p":"Impermeabilización + mortero de Protección","c":8689.0,"u":"m2","n":"Nivel 4","s":16,"e":"ejecutado","a":100},{"p":"Fachadas Ligeras","c":162.0,"u":"m2","n":"Nivel 4","s":null,"e":"por_ejecutar","a":0},{"p":"Muros Cortina","c":312.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Aislapol (incluye elementos según EETT)","c":1726.0,"u":"m2","n":"Nivel 4","s":8,"e":"ejecutado","a":100},{"p":"Revestimiento Acrílico según ETTT","c":1726.0,"u":"m2","n":"Nivel 4","s":4,"e":"en_progreso","a":72},{"p":"Fachadas Ventilada","c":3505.0,"u":"m2","n":"Nivel 1","s":2,"e":"en_progreso","a":83},{"p":"Muros Cortina","c":785.0,"u":"m2","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Mamparas Y Paredes Moviles","c":6.0,"u":"c/u","n":"Nivel 1","s":3,"e":"en_progreso","a":35},{"p":"Frentes De Losa","c":2.0,"u":"m2","n":"Nivel 4","s":14,"e":"ejecutado","a":100},{"p":"Instalación de Aislapol (incluye elementos según EETT)","c":1759.0,"u":"m2","n":"Nivel 1","s":5,"e":"ejecutado","a":100},{"p":"Revestimiento Acrílico según ETTT","c":1759.0,"u":"m2","n":"Nivel -1","s":8,"e":"en_progreso","a":67},{"p":"Muros Cortina","c":968.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Mamparas Y Paredes Moviles","c":82.0,"u":"c/u","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Frentes De Losa","c":3.0,"u":"m2","n":"Nivel -1","s":5,"e":"ejecutado","a":100},{"p":"Instalación de Aislapol (incluye elementos según EETT)","c":2435.0,"u":"m2","n":"Nivel 1","s":null,"e":"por_ejecutar","a":0},{"p":"Revestimiento Acrílico según ETTT","c":2435.0,"u":"m2","n":"Nivel 3","s":15,"e":"ejecutado","a":100},{"p":"Muros Cortina","c":823.0,"u":"m2","n":"Nivel 3","s":2,"e":"ejecutado","a":100},{"p":"Frentes De Losa","c":2.0,"u":"m2","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Aislapol (incluye elementos según EETT)","c":2125.0,"u":"m2","n":"Nivel 2","s":8,"e":"ejecutado","a":100},{"p":"Revestimiento Acrílico según ETTT","c":2125.0,"u":"m2","n":"Nivel 2","s":11,"e":"ejecutado","a":100},{"p":"Fachadas Ventilada","c":1876.0,"u":"m2","n":"Nivel 5","s":7,"e":"ejecutado","a":100},{"p":"Muros Cortina","c":569.0,"u":"m2","n":"Nivel 5","s":1,"e":"ejecutado","a":100},{"p":"Frentes De Losa","c":1.0,"u":"m2","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Aislapol (incluye elementos según EETT)","c":1905.0,"u":"m2","n":"Nivel 5","s":10,"e":"en_progreso","a":25},{"p":"Revestimiento Acrílico según ETTT","c":1905.0,"u":"m2","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Fachadas Ventilada","c":1335.0,"u":"m2","n":"Nivel 1","s":6,"e":"ejecutado","a":100},{"p":"Muros Cortina","c":596.0,"u":"m2","n":"Nivel 3","s":12,"e":"en_progreso","a":15},{"p":"Frentes De Losa","c":1.0,"u":"m2","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Aislapol (incluye elementos según EETT)","c":1920.0,"u":"m2","n":"Nivel 1","s":10,"e":"ejecutado","a":100},{"p":"Revestimiento Acrílico según ETTT","c":1920.0,"u":"m2","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Fachadas Ventilada","c":1370.0,"u":"m2","n":"Nivel -1","s":null,"e":"por_ejecutar","a":0},{"p":"Muros Cortina","c":528.0,"u":"m2","n":"Nivel 4","s":3,"e":"ejecutado","a":100},{"p":"Frentes De Losa","c":1.0,"u":"m2","n":"Nivel 2","s":null,"e":"por_ejecutar","a":0},{"p":"Instalación de Aislapol (incluye elementos según EETT)","c":1918.0,"u":"m2","n":"Nivel 1","s":10,"e":"ejecutado","a":100},{"p":"Revestimiento Acrílico según ETTT","c":1918.0,"u":"m2","n":"Nivel 4","s":10,"e":"en_progreso","a":54},{"p":"Fachadas Ventilada","c":1377.0,"u":"m2","n":"Nivel 4","s":null,"e":"por_ejecutar","a":0},{"p":"Frentes De Losa","c":2.0,"u":"m2","n":"Nivel 3","s":null,"e":"por_ejecutar","a":0},{"p":"Fachadas Ventilada","c":3157.0,"u":"m2","n":"Nivel -1","s":1,"e":"en_progreso","a":35}];
+const ST = {
+  ejecutado:{label:'Ejecutado',v:'--st-ejec'},
+  en_progreso:{label:'En Progreso',v:'--st-prog'},
+  por_ejecutar:{label:'Por Ejecutar',v:'--st-por'}
+};
+const cssv = (v)=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const NIVEL_ORDER = ['Nivel -1','Nivel 1','Nivel 2','Nivel 3','Nivel 4','Nivel 5'];
+const TOT_SEM = 16;
+const fmt = (n)=> (n||0).toLocaleString('es-CL',{maximumFractionDigits:0});
+const fmt1 = (n)=> (n||0).toLocaleString('es-CL',{maximumFractionDigits:1});
+
+let filtros = {estatus:'todos', semana:'todas', nivel:'todos'};
+
+function initFilters(){
+  const sem = document.getElementById('f-sem');
+  sem.innerHTML = '<option value="todas">Todas</option>' +
+    Array.from({length:TOT_SEM},(_,i)=>`<option value="${i+1}">Semana ${i+1}</option>`).join('') +
+    '<option value="0">Por Ejecutar</option>';
+  const niv = document.getElementById('f-niv');
+  niv.innerHTML = '<option value="todos">Todos</option>' +
+    NIVEL_ORDER.map(n=>`<option value="${n}">${n}</option>`).join('');
+  document.getElementById('f-est').onchange=e=>{filtros.estatus=e.target.value;render()};
+  sem.onchange=e=>{filtros.semana=e.target.value;render()};
+  niv.onchange=e=>{filtros.nivel=e.target.value;render()};
+  document.getElementById('reset').onclick=()=>{
+    filtros={estatus:'todos',semana:'todas',nivel:'todos'};
+    document.getElementById('f-est').value='todos';
+    sem.value='todas'; niv.value='todos'; render();
+  };
+}
+
+function aplica(d){
+  return d.filter(r=>{
+    if(filtros.estatus!=='todos' && r.e!==filtros.estatus) return false;
+    if(filtros.nivel!=='todos' && r.n!==filtros.nivel) return false;
+    if(filtros.semana!=='todas'){
+      const s = filtros.semana==='0'? null : Number(filtros.semana);
+      if(r.s!==s) return false;
+    }
+    return true;
+  });
+}
+
+function kpis(d){
+  let m2=0,m2av=0,cu=0,cuav=0,ejec=0,prog=0,por=0;
+  for(const r of d){
+    if(r.u==='m2'){m2+=r.c;m2av+=r.c*r.a/100;} else {cu+=r.c;cuav+=r.c*r.a/100;}
+    if(r.e==='ejecutado')ejec++; else if(r.e==='en_progreso')prog++; else por++;
+  }
+  const pct = m2>0? m2av/m2*100 : 0;
+  const el = document.getElementById('kpis');
+  el.innerHTML = [
+    ['Partidas',fmt(d.length),'de 286 ARQ'],
+    ['Superficie',fmt(m2)+' m²','cuantificable BIM'],
+    ['Elementos',fmt(cu)+' u','puertas/ventanas'],
+    ['En progreso',fmt(prog),'partidas'],
+    ['Por ejecutar',fmt(por),'partidas'],
+  ].map(k=>`<div class="kpi"><div class="lbl">${k[0]}</div><div class="val">${k[1]}</div><div class="sub">${k[2]}</div></div>`).join('')
+  + `<div class="kpi hl"><div class="lbl">% Ejecutado</div><div class="val">${fmt1(pct)}%</div><div class="sub">ponderado por m²</div></div>`;
+}
+
+function donut(d){
+  const map = new Map(); let por=0;
+  for(const r of d){ if(r.u!=='m2')continue;
+    if(r.s==null) por+=r.c; else map.set(r.s,(map.get(r.s)||0)+r.c); }
+  let segs = [...map.entries()].sort((a,b)=>a[0]-b[0])
+    .map(([s,v])=>({label:'Semana '+s, v, sem:s}));
+  if(por>0) segs.push({label:'Por Ejecutar', v:por, sem:0});
+  const total = segs.reduce((a,b)=>a+b.v,0)||1;
+  const R=85,r=52,cx=95,cy=95; let ang=-Math.PI/2; const parts=[];
+  const colFor=(s)=> s===0? cssv('--st-por') : mixBlue((s-1)/(TOT_SEM-1));
+  segs.forEach(sg=>{
+    const a0=ang, a1=ang+ (sg.v/total)*Math.PI*2; ang=a1;
+    const large = (a1-a0)>Math.PI?1:0;
+    const x0=cx+R*Math.cos(a0),y0=cy+R*Math.sin(a0),x1=cx+R*Math.cos(a1),y1=cy+R*Math.sin(a1);
+    const xi1=cx+r*Math.cos(a1),yi1=cy+r*Math.sin(a1),xi0=cx+r*Math.cos(a0),yi0=cy+r*Math.sin(a0);
+    parts.push(`<path d="M${x0} ${y0} A${R} ${R} 0 ${large} 1 ${x1} ${y1} L${xi1} ${yi1} A${r} ${r} 0 ${large} 0 ${xi0} ${yi0} Z" fill="${colFor(sg.sem)}" data-t="${sg.label}: ${fmt(sg.v)} m² (${(sg.v/total*100).toFixed(1)}%)"></path>`);
+  });
+  document.getElementById('donut').innerHTML =
+    `<svg width="190" height="190" viewBox="0 0 190 190">${parts.join('')}
+     <text x="95" y="90" text-anchor="middle" font-size="12" fill="${cssv('--ink-3')}" font-family="Inter">Total m²</text>
+     <text x="95" y="108" text-anchor="middle" font-size="17" fill="${cssv('--ink')}" font-family="IBM Plex Mono" font-weight="600">${fmt(total)}</text></svg>`;
+  document.getElementById('donut-legend').innerHTML = segs.sort((a,b)=>b.v-a.v).map(sg=>
+    `<div class="row"><i class="dot" style="background:${colFor(sg.sem)}"></i>${sg.label}<b>${fmt(sg.v)}</b></div>`).join('');
+  bindTips('#donut path');
+}
+function mixBlue(t){ const a=[0xdb,0xea,0xfe],b=[0x1e,0x3a,0x8a];
+  return '#'+a.map((c,i)=>Math.round(c+(b[i]-c)*t).toString(16).padStart(2,'0')).join(''); }
+
+function bars(d){
+  const map=new Map();
+  for(const r of d){ if(r.u!=='m2'||r.s==null)continue;
+    map.set(r.s,(map.get(r.s)||0)+r.c*r.a/100); }
+  const rows=[]; for(let s=1;s<=TOT_SEM;s++) rows.push({s,v:map.get(s)||0});
+  const max=Math.max(1,...rows.map(r=>r.v)); const W=360,H=160,pb=22,pl=4;
+  const bw=(W-pl*2)/rows.length;
+  const bars=rows.map((r,i)=>{
+    const h=(r.v/max)*(H-pb-6); const x=pl+i*bw; const y=H-pb-h;
+    return `<rect x="${x+2}" y="${y}" width="${bw-4}" height="${h}" rx="3" fill="${mixBlue(r.s/TOT_SEM)}" data-t="Semana ${r.s}: ${fmt(r.v)} m² ejecutados"></rect>
+      <text x="${x+bw/2}" y="${H-8}" text-anchor="middle" font-size="9" fill="${cssv('--ink-3')}" font-family="IBM Plex Mono">${r.s}</text>`;
+  }).join('');
+  document.getElementById('bars').innerHTML=`<svg width="100%" viewBox="0 0 ${W} ${H}">${bars}</svg>`;
+  bindTips('#bars rect');
+}
+
+function stage(d){
+  // % ejecutado (m2, ponderado) por nivel -> color heat
+  const agg={}; NIVEL_ORDER.forEach(n=>agg[n]={c:0,av:0});
+  for(const r of d){ if(!agg[r.n])continue; if(r.u==='m2'){agg[r.n].c+=r.c;agg[r.n].av+=r.c*r.a/100;} }
+  const levels=[...NIVEL_ORDER].reverse(); // arriba el nivel más alto
+  const W=340,H=340,cx=170; const fh=40, fw=190, dx=70, dy=22;
+  let svg=`<svg width="100%" viewBox="0 0 ${W} ${H}" style="max-height:340px">`;
+  levels.forEach((n,i)=>{
+    const pct = agg[n].c>0? agg[n].av/agg[n].c*100 : 0;
+    const col = heat(pct);
+    const y=30+i*(fh+8);
+    const dim = (filtros.nivel!=='todos' && filtros.nivel!==n)?' dim':'';
+    // isometric-ish slab: front + top + side
+    svg+=`<g class="lvl${dim}" data-niv="${n}" data-t="${n}: ${fmt1(pct)}% ejecutado (${fmt(agg[n].c)} m²)">
+      <polygon points="${cx-fw/2},${y} ${cx-fw/2+dx},${y-dy} ${cx+fw/2+dx},${y-dy} ${cx+fw/2},${y}" fill="${shade(col,1.18)}"/>
+      <polygon points="${cx+fw/2},${y} ${cx+fw/2+dx},${y-dy} ${cx+fw/2+dx},${y-dy+fh} ${cx+fw/2},${y+fh}" fill="${shade(col,.82)}"/>
+      <rect x="${cx-fw/2}" y="${y}" width="${fw}" height="${fh}" fill="${col}"/>
+      <text x="${cx-fw/2+10}" y="${y+fh/2+4}" font-size="12" fill="#fff" font-family="Barlow Semi Condensed" font-weight="600">${n}</text>
+      <text x="${cx+fw/2-10}" y="${y+fh/2+4}" text-anchor="end" font-size="12" fill="#fff" font-family="IBM Plex Mono">${fmt1(pct)}%</text>
+    </g>`;
+  });
+  svg+='</svg>';
+  const st=document.getElementById('stage');
+  st.innerHTML=svg+'<div class="note">Esquema representativo — el visor 3D real (Speckle) se integra en la app desplegada</div>';
+  st.querySelectorAll('.lvl').forEach(g=>g.onclick=()=>{
+    const n=g.getAttribute('data-niv');
+    filtros.nivel = filtros.nivel===n?'todos':n;
+    document.getElementById('f-niv').value=filtros.nivel; render();
+  });
+  bindTips('#stage .lvl');
+}
+function heat(p){ // rojo(bajo)->ambar->verde(alto) via status blend
+  if(p>=99) return cssv('--st-ejec');
+  if(p<=1) return cssv('--st-por');
+  // interpolate prog->ejec
+  const prog=hexrgb(cssv('--st-prog')),ejec=hexrgb(cssv('--st-ejec'));
+  const t=p/100; return 'rgb('+prog.map((c,i)=>Math.round(c+(ejec[i]-c)*t)).join(',')+')';
+}
+function hexrgb(h){h=h.replace('#','');if(h.length===3)h=h.split('').map(x=>x+x).join('');return [0,2,4].map(i=>parseInt(h.substr(i,2),16));}
+function shade(c,f){let r;if(c.startsWith('rgb')){r=c.match(/\d+/g).map(Number);}else{r=hexrgb(c);}return 'rgb('+r.map(v=>Math.max(0,Math.min(255,Math.round(v*f)))).join(',')+')';}
+
+function tabla(d){
+  const g=new Map();
+  for(const r of d){ const k=r.p+'|'+r.u;
+    const o=g.get(k)||{p:r.p,u:r.u,c:0,av:0}; o.c+=r.c; o.av+=r.c*r.a/100; g.set(k,o); }
+  let rows=[...g.values()].map(o=>({...o,pct:o.c>0?o.av/o.c*100:0}));
+  rows.sort((a,b)=> sortK==='p'? a.p.localeCompare(b.p) : (b[sortK==='a'?'pct':sortK]-a[sortK==='a'?'pct':sortK])|| b.c-a.c);
+  const body=rows.map(o=>{
+    const est = o.pct>=99?'ejecutado':o.pct<=0?'por_ejecutar':'en_progreso';
+    const s=ST[est];
+    return `<tr>
+      <td>${o.p}</td>
+      <td>${o.u}</td>
+      <td class="num">${fmt1(o.c)}</td>
+      <td><div class="barcell"><div class="bar"><i style="width:${o.pct.toFixed(0)}%;background:${cssv(s.v)}"></i></div><span class="pct">${o.pct.toFixed(0)}%</span></div></td>
+      <td><span class="pill" style="background:color-mix(in srgb,${cssv(s.v)} 16%,transparent);color:${cssv(s.v)}"><i class="dot" style="background:${cssv(s.v)}"></i>${s.label}</span></td>
+    </tr>`;
+  }).join('');
+  document.querySelector('#tbl tbody').innerHTML = body || `<tr><td colspan="5" style="text-align:center;color:var(--ink-3);padding:24px">Sin partidas para este filtro</td></tr>`;
+  document.getElementById('tbl-count').textContent = `· ${rows.length} tipos · ${fmt(d.length)} registros`;
+}
+let sortK='c';
+document.querySelectorAll('#tbl thead th').forEach(th=>th.onclick=()=>{sortK=th.dataset.k;render();});
+
+// tooltip
+const tip=document.getElementById('tip');
+function bindTips(sel){
+  document.querySelectorAll(sel).forEach(el=>{
+    el.onmousemove=(e)=>{const t=el.getAttribute('data-t');if(!t)return;
+      tip.textContent=t;tip.style.opacity=1;tip.style.left=(e.clientX+12)+'px';tip.style.top=(e.clientY+12)+'px';};
+    el.onmouseleave=()=>tip.style.opacity=0;
+  });
+}
+
+function render(){ const d=aplica(DATA); kpis(d); donut(d); bars(d); stage(d); tabla(d); }
+initFilters(); render();
+</script>
